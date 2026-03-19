@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase Introductoria - Alvaro SDR</title>
+    <!-- Tailwind CSS with Design System Patterns -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            900: '#134e4a',
+                        },
+                        secondary: {
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                        },
+                        neutral: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'fade-up': 'fadeUp 0.8s ease-out forwards',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 5px rgba(20, 184, 166, 0.2)' },
+                            '100%': { boxShadow: '0 0 20px rgba(20, 184, 166, 0.6), 0 0 40px rgba(139, 92, 246, 0.4)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8fafc;
+            color: #0f172a;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #0d9488, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .text-blue-gradient {
+            background: linear-gradient(135deg, #2563eb, #4f46e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Animated grid background */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(20, 184, 166, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(20, 184, 166, 0.05) 1px, transparent 1px);
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: -1;
+            mask-image: linear-gradient(to bottom, transparent, black, transparent);
+        }
+
+        .vsl-overlay {
+            background: rgba(124, 58, 237, 0.9);
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary-500 selection:text-white relative min-h-screen pb-20">
+
+    <!-- Global Background Animations from Design System -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-[-2]">
+        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-primary-500/10 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+        <div class="absolute top-[20%] right-[-10%] w-96 h-96 bg-blue-500/10 rounded-full mix-blend-multiply filter blur-3xl animate-blob" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-[-20%] left-[20%] w-[500px] h-[500px] bg-secondary-500/10 rounded-full mix-blend-multiply filter blur-3xl animate-blob" style="animation-delay: 4s;"></div>
+    </div>
+    <div class="fixed inset-0 pointer-events-none bg-grid z-[-1]"></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-6xl mx-auto px-6 pt-6 md:pt-8 w-full">
+        
+        <!-- Header / Logo -->
+        <header class="flex flex-col items-center justify-center mb-6 md:mb-8 animate-fade-up">
+            <img src="logo.jpg" alt="Alvaro SDR Logo" class="h-12 md:h-16 mb-4 object-contain rounded-2xl shadow-sm">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-sm font-medium text-slate-700 shadow-sm border border-slate-200">
+                <div class="flex -space-x-2">
+                    <!-- Student avatars -->
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Student 1" class="w-7 h-7 rounded-full border-2 border-white object-cover shadow-sm bg-slate-200">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Student 2" class="w-7 h-7 rounded-full border-2 border-white object-cover shadow-sm bg-slate-300">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Student 3" class="w-7 h-7 rounded-full border-2 border-white object-cover shadow-sm bg-slate-400">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Student 4" class="w-7 h-7 rounded-full border-2 border-white object-cover shadow-sm bg-slate-200">
+                </div>
+                <span>+ de 796 alumnos formados</span>
+            </div>
+        </header>
+
+        <!-- Headline & Subheadline -->
+        <section class="text-center max-w-[1000px] mx-auto mb-8">
+            <h1 class="text-3xl md:text-4xl lg:text-[44px] font-extrabold tracking-tight leading-[1.15] text-slate-900 mb-6 animate-fade-up" style="animation-delay: 0.1s;">
+                Clase para vendedores con experiencia que quieren dar el salto al <span class="text-gradient inline-block">mundo digital</span>
+            </h1>
+            
+            <!-- Bullets Checkmarks -->
+            <ul class="flex flex-col md:flex-row shadow-sm glass-card border-slate-100 rounded-2xl py-2 px-5 justify-center gap-3 md:gap-6 text-slate-700 text-sm md:text-base font-medium mb-6 inline-flex animate-fade-up" style="animation-delay: 0.2s;">
+                <li class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                    Teletrabajo
+                </li>
+                <li class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                    Proyección de carrera
+                </li>
+                <li class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                    Estabilidad económica
+                </li>
+            </ul>
+
+            <h2 class="text-xl md:text-2xl font-medium text-slate-800 bg-slate-100 py-3 px-4 rounded-lg inline-block animate-fade-up" style="animation-delay: 0.3s;">
+                Mira gratis la clase introductoria y aprende más de 5 claves reales sobre cómo acceder a un puesto en ventas digitales.
+            </h2>
+        </section>
+
+        <!-- Video & Content Row -->
+        <section class="grid lg:grid-cols-12 gap-6 lg:gap-8 lg:items-stretch pb-10">
+            
+            <!-- Video Column -->
+            <div class="lg:col-span-8 relative animate-fade-up group flex flex-col justify-center" style="animation-delay: 0.4s;">
+                <div class="relative bg-black rounded-2xl md:rounded-[2rem] overflow-hidden shadow-2xl aspect-video w-full flex items-center justify-center cursor-pointer border-4 border-white">
+                    <!-- Video Fake Placeholder (can be replaced by iframe) -->
+                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Video cover" class="w-full h-full object-cover opacity-60 transition-opacity duration-300 group-hover:opacity-80">
+                    
+                    <!-- Sound Overlay Modal (Pulse aquí para activar el sonido) -->
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="vsl-overlay text-white px-6 py-4 md:px-8 md:py-6 rounded-2xl flex flex-col items-center gap-2 md:gap-3 transform transition-transform group-hover:scale-105 pointer-events-auto cursor-pointer animate-pulse-slow">
+                            <span class="font-semibold text-base md:text-lg">Pulse aquí</span>
+                            <svg class="w-12 h-12 md:w-16 md:h-16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+                            </svg>
+                            <span class="font-bold text-base md:text-lg">para activar el sonido</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Adjusted smaller text for space saving -->
+                <p class="text-center text-xs md:text-sm font-semibold text-slate-500 mt-4 animate-fade-up" style="animation-delay: 0.5s;">
+                    Si llevas tiempo pensando en un cambio laboral, esto puede ayudarte
+                </p>
+            </div>
+
+            <!-- Content Bullet Points Column -->
+            <div class="lg:col-span-4 flex flex-col justify-center animate-fade-up" style="animation-delay: 0.5s;">
+                
+                <div class="glass-card rounded-2xl p-5 lg:p-6 h-full flex flex-col justify-between">
+                    <ul class="space-y-4 md:space-y-5 text-slate-700 font-medium text-xs md:text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 w-2 h-2 rounded-full bg-primary-500 shrink-0 shadow-[0_0_8px_rgba(20,184,166,0.8)]"></span>
+                            <p class="leading-relaxed">La verdadera oportunidad del rol SDR: entrar por la puerta correcta del crecimiento digital.</p>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 w-2 h-2 rounded-full bg-primary-500 shrink-0 shadow-[0_0_8px_rgba(20,184,166,0.8)]"></span>
+                            <p class="leading-relaxed">Cómo acceder a un puesto digital aunque no vengas del sector digital.</p>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 w-2 h-2 rounded-full bg-primary-500 shrink-0 shadow-[0_0_8px_rgba(20,184,166,0.8)]"></span>
+                            <p class="leading-relaxed">Por qué el SDR tiene más proyección que muchos roles tradicionales de ventas.</p>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 w-2 h-2 rounded-full bg-primary-500 shrink-0 shadow-[0_0_8px_rgba(20,184,166,0.8)]"></span>
+                            <p class="leading-relaxed">Qué perfiles están contratando hoy las empresas digitales para ventas.</p>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 w-2 h-2 rounded-full bg-primary-500 shrink-0 shadow-[0_0_8px_rgba(20,184,166,0.8)]"></span>
+                            <p class="leading-relaxed">Por qué vender en digital requiere un método, no solo experiencia.</p>
+                        </li>
+                    </ul>
+
+                    <!-- CTA Button -->
+                    <div class="pt-5 mt-auto">
+                        <button id="btnOpenModal" class="w-full relative px-4 py-3 md:py-4 bg-[#1BB159] text-white rounded-xl font-bold text-base overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_5px_15px_rgba(27,177,89,0.3)] hover:shadow-[0_10px_25px_rgba(27,177,89,0.4)] flex items-center justify-between group outline-none">
+                            <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full duration-700 ease-in-out"></div>
+                            Quiero trabajar en digital
+                            <div class="w-6 h-6 md:w-8 md:h-8 shrink-0 rounded-full bg-black/20 flex items-center justify-center transition-transform group-hover:rotate-45 ml-2">
+                                <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    <!-- BENEFITS / GUARANTEES SECTION -->
+    <section class="max-w-5xl mx-auto px-6 pt-4 pb-20 w-full relative z-10 animate-fade-up">
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-6">
+
+            <!-- Card 1: Garantía (Bento Large Left) -->
+            <div class="md:col-span-7 glass-card rounded-[2rem] p-8 md:p-10 bg-white/90 border border-primary-100 hover:border-primary-300 hover:shadow-[0_20px_40px_rgba(20,184,166,0.08)] transition-all group relative overflow-hidden flex flex-col justify-center">
+                <div class="absolute -right-20 -top-20 w-64 h-64 bg-primary-100/50 rounded-full blur-3xl -z-10 group-hover:bg-primary-200/50 transition-colors pointer-events-none"></div>
+                
+                <div class="flex flex-col sm:flex-row sm:items-center gap-5 mb-6">
+                    <div class="w-14 h-14 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center shrink-0 border border-primary-100/50 shadow-sm">
+                        <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3 class="text-[19px] md:text-xl font-extrabold text-slate-800 leading-tight">
+                        Garantía de empleabilidad por contrato para alumnos certificados que cumplan el proceso
+                    </h3>
+                </div>
+                <!-- Highlight keywords to reduce reading fatigue -->
+                <p class="text-slate-600 text-[15.5px] md:text-[16.5px] leading-relaxed">
+                    Si completas la certificación y, tras el plazo establecido, no consigues trabajo como SDR en una empresa digital, <strong class="font-bold text-slate-900 bg-primary-50 px-1.5 py-0.5 rounded text-[16px]">te devolvemos el dinero</strong>. La garantía está recogida por contrato y vinculada al cumplimiento del proceso.
+                </p>
+            </div>
+
+            <!-- Card 2: Soporte (Bento Small Right) -->
+            <div class="md:col-span-5 glass-card rounded-[2rem] p-8 md:p-10 bg-white/90 border border-secondary-100 hover:border-secondary-300 hover:shadow-[0_20px_40px_rgba(139,92,246,0.08)] transition-all group relative overflow-hidden flex flex-col justify-center">
+                <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-secondary-100/50 rounded-full blur-3xl -z-10 group-hover:bg-secondary-200/50 transition-colors pointer-events-none"></div>
+                
+                <div class="w-12 h-12 rounded-2xl bg-secondary-50 text-secondary-600 flex items-center justify-center mb-5 shrink-0 border border-secondary-100/50 shadow-sm">
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <h3 class="text-xl font-extrabold text-slate-800 mb-3 leading-tight">
+                    Soporte durante la certificación
+                </h3>
+                <p class="text-slate-600 text-[15px] md:text-[16px] leading-relaxed">
+                    Durante la formación tendrás soporte por escrito para resolver dudas sobre el proceso y los contenidos. El equipo responde en un <strong class="font-bold text-slate-900 border-b-2 border-secondary-200">plazo máximo de 24 horas</strong>, de lunes a viernes, en horario laboral.
+                </p>
+            </div>
+
+            <!-- Card 3: Comunidad (Bento Wide Dark Contrast) -->
+            <div class="md:col-span-12 glass-card rounded-[2rem] p-8 md:p-10 bg-slate-900 border border-slate-800 hover:border-slate-700 hover:shadow-[0_20px_40px_rgba(59,130,246,0.15)] transition-all group relative overflow-hidden flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10">
+                <div class="absolute left-0 top-0 w-full h-full bg-gradient-to-r from-blue-900/40 to-transparent pointer-events-none -z-10"></div>
+                <div class="absolute -left-20 top-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/20 rounded-full blur-[80px] pointer-events-none"></div>
+                
+                <div class="w-16 h-16 md:w-20 md:h-20 rounded-[1.5rem] bg-slate-800 border border-slate-700 text-blue-400 flex items-center justify-center shrink-0 shadow-inner group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                    <svg class="w-8 h-8 md:w-10 md:h-10 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                </div>
+                
+                <div class="flex-1 relative z-10">
+                    <h3 class="text-[22px] md:text-2xl font-extrabold text-white mb-3 tracking-tight">
+                        Comunidad de alumnos y alumni
+                    </h3>
+                    <p class="text-slate-400 text-[16px] md:text-[17.5px] leading-relaxed font-medium">
+                        Durante la formación formarás parte de la comunidad de alumnos de <strong class="text-white font-bold tracking-wide">Yinius.io</strong> y, al finalizar, de su red de alumni. Un entorno donde compartir proceso, aprendizaje y experiencias con personas que buscan el mismo salto profesional.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Multi-Step Modal Overlay -->
+    <div id="applicationModal" class="fixed inset-0 z-50 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <!-- Backdrop -->
+        <div id="modalBackdrop" class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm cursor-pointer"></div>
+        
+        <!-- Modal Container -->
+        <div class="relative bg-white rounded-3xl shadow-2xl w-full max-w-lg mx-4 transform scale-95 opacity-0 transition-all duration-300 overflow-hidden" id="modalContent">
+            
+            <!-- Header with Close & Progress -->
+            <div class="px-6 py-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+                <h3 class="text-lg font-bold text-slate-800">Candidatura</h3>
+                <button id="btnCloseModal" class="text-slate-400 hover:text-red-500 transition-colors bg-white rounded-full p-1 shadow-sm border border-slate-200 hover:rotate-90">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="w-full bg-slate-100 h-1.5">
+                <div id="modalProgress" class="bg-primary-500 h-1.5 transition-all duration-500 w-1/3"></div>
+            </div>
+
+            <div class="p-6 md:p-8">
+                <form id="multiStepForm" novalidate onsubmit="return false;">
+                    
+                    <!-- STEP 1 -->
+                    <div class="step-pane transition-all duration-500" id="step1">
+                        <div class="mb-6 flex justify-between items-end">
+                            <h4 class="text-xl font-bold text-slate-900">Datos Personales</h4>
+                            <span class="text-xs font-semibold text-primary-600 bg-primary-50 px-2 py-1 rounded-md">Paso 1 de 3</span>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wide mb-1.5">Nombre <span class="text-red-500">*</span></label>
+                                    <input type="text" id="inputNombre" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-50 transition-all" placeholder="Juan">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wide mb-1.5">Apellido <span class="text-red-500">*</span></label>
+                                    <input type="text" id="inputApellido" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-50 transition-all" placeholder="Pérez">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wide mb-1.5">Email <span class="text-red-500">*</span></label>
+                                <input type="email" id="inputEmail" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-50 transition-all" placeholder="tucorreo@ejemplo.com">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wide mb-1.5">Teléfono <span class="text-red-500">*</span></label>
+                                <div class="flex">
+                                    <select id="inputPais" class="px-3 py-3 bg-slate-50 border border-slate-200 border-r-0 rounded-l-xl text-sm focus:outline-none focus:bg-white focus:border-primary-500 transition-all font-medium text-slate-700">
+                                        <option value="+34">🇪🇸 +34</option>
+                                        <option value="+52">🇲🇽 +52</option>
+                                        <option value="+57">🇨🇴 +57</option>
+                                        <option value="+54">🇦🇷 +54</option>
+                                        <option value="+56">🇨🇱 +56</option>
+                                        <option value="+1">🇺🇸 +1</option>
+                                    </select>
+                                    <input type="tel" id="inputTelefono" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-r-xl text-sm focus:outline-none focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-50 transition-all" placeholder="600 000 000">
+                                </div>
+                            </div>
+                            <div id="errorStep1" class="text-red-500 text-sm hidden font-medium mt-2">Por favor, rellena todos los campos correctamente.</div>
+                        </div>
+                        <div class="mt-8 flex justify-end">
+                            <button type="button" onclick="nextStep(1)" class="px-6 py-3 bg-primary-600 hover:bg-primary-500 text-white rounded-xl font-semibold shadow-md hover:shadow-lg transition-all active:scale-95 flex items-center gap-2">
+                                Siguiente
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2 -->
+                    <div class="step-pane hidden p-6 md:p-8 transition-all duration-300 translate-x-10 opacity-0 bg-white flex flex-col" id="step2">
+                        <div class="mb-6 flex justify-between items-end">
+                            <h4 class="text-xl font-bold text-slate-900">Experiencia</h4>
+                            <span class="text-xs font-semibold text-primary-600 bg-primary-50 px-2 py-1 rounded-md">Paso 2 de 3</span>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">¿Alguna vez has trabajado en ventas o atención al público? <span class="text-red-500">*</span></label>
+                                <select id="inputExperiencia" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-50 transition-all appearance-none cursor-pointer">
+                                    <option value="" disabled selected>Selecciona una opción</option>
+                                    <option value="pasado">Sí, trabajé en ello</option>
+                                    <option value="actual">Sí, actualmente</option>
+                                    <option value="no">No (en ese caso, no agendes por favor)</option>
+                                </select>
+                                <div class="pointer-events-none absolute right-12 top-[138px] flex items-center px-2 text-slate-500">
+                                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                            </div>
+                            <div id="errorStep2" class="text-red-500 text-sm hidden font-medium mt-2">Selecciona una opción para continuar.</div>
+                        </div>
+                        <div class="mt-auto pt-6 flex justify-between">
+                            <button type="button" onclick="prevStep(2)" class="px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl font-semibold transition-all active:scale-95">
+                                Volver
+                            </button>
+                            <button type="button" onclick="nextStep(2)" class="px-6 py-3 bg-primary-600 hover:bg-primary-500 text-white rounded-xl font-semibold shadow-md hover:shadow-lg transition-all active:scale-95 flex items-center gap-2">
+                                Siguiente
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3 -->
+                    <div class="step-pane hidden p-6 md:p-8 transition-all duration-300 translate-x-10 opacity-0 bg-white flex flex-col" id="step3">
+                        <div class="mb-6 flex justify-between items-end">
+                            <h4 class="text-xl font-bold text-slate-900">Validación</h4>
+                            <span class="text-xs font-semibold text-primary-600 bg-primary-50 px-2 py-1 rounded-md">Paso 3 de 3</span>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">¿Tienes permiso para trabajar en España? <span class="text-red-500">*</span></label>
+                                <select id="inputPermiso" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-50 transition-all appearance-none cursor-pointer">
+                                    <option value="" disabled selected>Selecciona una opción</option>
+                                    <option value="si">Sí, tengo</option>
+                                    <option value="no">No (en ese caso, agenda cuando la tengas)</option>
+                                </select>
+                                <div class="pointer-events-none absolute right-12 top-[138px] flex items-center px-2 text-slate-500">
+                                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                            </div>
+                            <div id="errorStep3" class="text-red-500 text-sm hidden font-medium mt-2">Selecciona una opción para finalizar.</div>
+                        </div>
+                        <div class="mt-auto pt-6 flex justify-between">
+                            <button type="button" onclick="prevStep(3)" class="px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl font-semibold transition-all active:scale-95">
+                                Volver
+                            </button>
+                            <button type="button" onclick="submitForm()" class="px-6 py-3 bg-secondary-600 hover:bg-secondary-500 text-white rounded-xl font-semibold shadow-lg hover:shadow-secondary-500/50 transition-all active:scale-95 flex items-center gap-2">
+                                Enviar
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- SUCCESS STATE -->
+                    <div class="step-pane hidden p-6 md:p-8 transition-all duration-300 translate-x-10 opacity-0 bg-white flex flex-col items-center justify-center text-center" id="stepSuccess">
+                        <div class="w-16 h-16 rounded-full bg-green-100 text-green-600 flex items-center justify-center mx-auto mb-4 ring-8 ring-green-50 animate-[fadeUp_0.5s_ease-out]">
+                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-slate-900 mb-2 animate-fade-up">¡Enviado con éxito!</h4>
+                        <p class="text-slate-500 mb-8 animate-fade-up" style="animation-delay: 0.1s;">Te estaremos contactando pronto.</p>
+                        <button type="button" onclick="closeModal()" class="px-6 py-3 bg-slate-900 text-white rounded-xl font-semibold transition-all hover:bg-slate-800 active:scale-95 animate-fade-up" style="animation-delay: 0.2s;">
+                            Cerrar
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Modal Logic
+        const modal = document.getElementById('applicationModal');
+        const modalContent = document.getElementById('modalContent');
+        const btnOpen = document.getElementById('btnOpenModal');
+        const btnClose = document.getElementById('btnCloseModal');
+        const backdrop = document.getElementById('modalBackdrop');
+        const progressBar = document.getElementById('modalProgress');
+
+        function openModal() {
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+            }, 50);
+        }
+
+        function closeModal() {
+            modalContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('opacity-0', 'pointer-events-none');
+                // Optional: reset form after closing
+                // resetForm(); 
+            }, 300);
+        }
+
+        btnOpen.addEventListener('click', openModal);
+        btnClose.addEventListener('click', closeModal);
+        backdrop.addEventListener('click', closeModal);
+
+        // Multi-step Wizard Logic
+        function validateStep1() {
+            const nom = document.getElementById('inputNombre').value.trim();
+            const ape = document.getElementById('inputApellido').value.trim();
+            const elm = document.getElementById('inputEmail').value.trim();
+            const tel = document.getElementById('inputTelefono').value.trim();
+            const err = document.getElementById('errorStep1');
+            
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!nom || !ape || !elm || !tel || !emailRegex.test(elm)) {
+                err.classList.remove('hidden');
+                return false;
+            }
+            err.classList.add('hidden');
+            return true;
+        }
+
+        function validateStep2() {
+            const exp = document.getElementById('inputExperiencia').value;
+            const err = document.getElementById('errorStep2');
+            if (!exp) {
+                err.classList.remove('hidden');
+                return false;
+            }
+            err.classList.add('hidden');
+            return true;
+        }
+
+        function validateStep3() {
+            const perm = document.getElementById('inputPermiso').value;
+            const err = document.getElementById('errorStep3');
+            if (!perm) {
+                err.classList.remove('hidden');
+                return false;
+            }
+            err.classList.add('hidden');
+            return true;
+        }
+
+        function switchPane(fromStepId, toStepId, progressWidth) {
+            const fromPane = document.getElementById(fromStepId);
+            const toPane = document.getElementById(toStepId);
+            
+            // Fade out current
+            fromPane.classList.add('opacity-0');
+            
+            setTimeout(() => {
+                fromPane.classList.add('hidden');
+                
+                // Prepare new
+                toPane.classList.remove('hidden');
+                setTimeout(() => {
+                    toPane.classList.remove('translate-x-10', 'opacity-0');
+                }, 50);
+            }, 300); // Wait for fade out
+
+            // Update Progress
+            progressBar.className = `bg-primary-500 h-1.5 transition-all duration-500 ${progressWidth}`;
+        }
+
+        function nextStep(currentStep) {
+            if (currentStep === 1) {
+                if (validateStep1()) switchPane('step1', 'step2', 'w-2/3');
+            } else if (currentStep === 2) {
+                if (validateStep2()) switchPane('step2', 'step3', 'w-full');
+            }
+        }
+
+        function prevStep(currentStep) {
+            if (currentStep === 2) {
+                switchPane('step2', 'step1', 'w-1/3');
+            } else if (currentStep === 3) {
+                switchPane('step3', 'step2', 'w-2/3');
+            }
+        }
+
+        function submitForm() {
+            if (!validateStep3()) return;
+            
+            // Here you would collect data and send to backend
+            const formData = {
+                nombre: document.getElementById('inputNombre').value,
+                apellido: document.getElementById('inputApellido').value,
+                email: document.getElementById('inputEmail').value,
+                pais: document.getElementById('inputPais').value,
+                telefono: document.getElementById('inputTelefono').value,
+                experiencia: document.getElementById('inputExperiencia').value,
+                permiso: document.getElementById('inputPermiso').value,
+            };
+
+            console.log("Form Data Sent: ", formData);
+            
+            // Show Success
+            switchPane('step3', 'stepSuccess', 'w-full bg-green-500');
+        }
+
+        function resetForm() {
+            document.getElementById('multiStepForm').reset();
+            const panes = ['step1', 'step2', 'step3', 'stepSuccess'];
+            panes.forEach(id => {
+                const p = document.getElementById(id);
+                p.classList.add('hidden', 'translate-x-10', 'opacity-0');
+                p.classList.remove('-translate-x-10');
+            });
+            const s1 = document.getElementById('step1');
+            s1.classList.remove('hidden', 'translate-x-10', 'opacity-0');
+            progressBar.className = 'bg-primary-500 h-1.5 transition-all duration-500 w-1/3';
+        }
+    </script>
+</body>
+</html>
