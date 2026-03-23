@@ -157,7 +157,7 @@
         </header>
 
         <!-- Headline & Subheadline -->
-        <section class="text-center max-w-[1000px] mx-auto mb-8">
+        <section id="hero" class="text-center max-w-[1000px] mx-auto mb-8 scroll-mt-24">
             <h1 class="text-3xl md:text-4xl lg:text-[44px] font-extrabold tracking-tight leading-[1.15] text-slate-900 mb-6 animate-fade-up"
                 style="animation-delay: 0.1s;">
                 Clase para vendedores con experiencia que quieren dar el salto al <span
@@ -834,8 +834,7 @@
                 </div>
 
                 <div class="animate-fade-up" style="animation-delay: 0.2s;">
-                    <button onclick="document.getElementById('openModalBtn').click()"
-                        class="relative inline-flex items-center justify-center px-8 md:px-14 py-5 md:py-6 font-extrabold text-white text-lg md:text-xl transition-all duration-500 bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 rounded-[2rem] hover:scale-105 hover:shadow-[0_0_50px_rgba(236,72,153,0.6)] focus:outline-none overflow-hidden group/btn border border-white/20">
+                    <button class="open-modal-btn relative inline-flex items-center justify-center px-8 md:px-14 py-5 md:py-6 font-extrabold text-white text-lg md:text-xl transition-all duration-500 bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 rounded-[2rem] hover:scale-105 hover:shadow-[0_0_50px_rgba(236,72,153,0.6)] focus:outline-none overflow-hidden group/btn border border-white/20">
                         <span class="relative z-10 drop-shadow-sm">Unirme ahora al Método Yinius.io</span>
                         <div
                             class="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000">
@@ -2040,7 +2039,7 @@
     <!-- FOOTER FULL BLEED -->
     <footer style="width:100%;margin:0;padding:0;background:linear-gradient(135deg,#1d4ed8 0%,#7c3aed 50%,#4338ca 100%);display:block;">
         <div style="max-width:900px;margin:0 auto;padding:2rem 1.5rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:1rem;">
-            <img src="IMAGENES VSL (1)/1.png" alt="Yinius.io" style="height:2.5rem;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.95;">
+            <img src="assets/images/logo.jpg" alt="Logo Yinius.io" style="height:2.5rem;width:auto;object-fit:contain;border-radius:0.5rem;box-shadow:0 1px 2px rgba(0,0,0,0.1);">
             <nav style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0.5rem 1.25rem;">
                 <a href="https://yinius.io/politica-de-privacidad/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;font-weight:600;text-decoration:none;">Política de privacidad</a>
                 <span style="color:rgba(255,255,255,0.3);">|</span>
@@ -2274,7 +2273,6 @@
             // Modal Logic
             const modal = document.getElementById('applicationModal');
             const modalContent = document.getElementById('modalContent');
-            const btnOpen = document.getElementById('btnOpenModal');
             const btnClose = document.getElementById('btnCloseModal');
             const backdrop = document.getElementById('modalBackdrop');
             const progressBar = document.getElementById('modalProgress');
@@ -2295,9 +2293,22 @@
                 }, 300);
             }
 
-            btnOpen.addEventListener('click', openModal);
-            btnClose.addEventListener('click', closeModal);
-            backdrop.addEventListener('click', closeModal);
+            if (btnClose) btnClose.addEventListener('click', closeModal);
+            if (backdrop) backdrop.addEventListener('click', closeModal);
+
+            // Wire buttons: The first one (hero) opens modal, rest scroll to hero
+            const allBtns = document.querySelectorAll('.open-modal-btn, [id="btnOpenModal"]');
+            allBtns.forEach((btn, index) => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (index === 0) {
+                        openModal(); // First button in DOM is the Hero CTA
+                    } else {
+                        const heroSec = document.getElementById('hero');
+                        if (heroSec) heroSec.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
 
             // Multi-step Wizard Logic
             function validateStep1() {
