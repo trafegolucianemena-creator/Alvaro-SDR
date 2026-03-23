@@ -228,7 +228,7 @@
             </div>
 
             <!-- Content Bullet Points Column -->
-            <div class="lg:col-span-4 flex flex-col justify-center animate-fade-up" style="animation-delay: 0.5s;">
+            <div id="mobile-hero" class="lg:col-span-4 flex flex-col justify-center animate-fade-up scroll-mt-20 md:scroll-mt-24" style="animation-delay: 0.5s;">
 
                 <div class="glass-card rounded-2xl p-5 lg:p-6 h-full flex flex-col justify-between">
                     <ul class="space-y-4 md:space-y-5 text-slate-700 font-medium text-xs md:text-sm">
@@ -2306,7 +2306,8 @@
                     if (index === 0) {
                         openModal(); // First button in DOM is the Hero CTA
                     } else {
-                        const heroSec = document.getElementById('hero');
+                        const targetId = window.innerWidth < 1024 ? 'mobile-hero' : 'hero';
+                        const heroSec = document.getElementById(targetId);
                         if (heroSec) heroSec.scrollIntoView({ behavior: 'smooth' });
                     }
                 });
