@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,7 +60,8 @@
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
         body {
             background-color: #f8fafc;
@@ -93,9 +95,12 @@
         .bg-grid {
             background-size: 40px 40px;
             background-image: linear-gradient(to right, rgba(20, 184, 166, 0.05) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(20, 184, 166, 0.05) 1px, transparent 1px);
+                linear-gradient(to bottom, rgba(20, 184, 166, 0.05) 1px, transparent 1px);
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             z-index: -1;
             mask-image: linear-gradient(to bottom, transparent, black, transparent);
         }
@@ -103,34 +108,49 @@
         .vsl-overlay {
             background: rgba(124, 58, 237, 0.9);
             box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
-            border: 2px solid rgba(255,255,255,0.3);
+            border: 2px solid rgba(255, 255, 255, 0.3);
         }
     </style>
 </head>
-<body class="antialiased selection:bg-primary-500 selection:text-white relative min-h-screen pb-20">
+
+<body class="antialiased selection:bg-primary-500 selection:text-white relative min-h-screen">
 
     <!-- Global Background Animations from Design System -->
     <div class="fixed inset-0 overflow-hidden pointer-events-none z-[-2]">
-        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-primary-500/10 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-        <div class="absolute top-[20%] right-[-10%] w-96 h-96 bg-blue-500/10 rounded-full mix-blend-multiply filter blur-3xl animate-blob" style="animation-delay: 2s;"></div>
-        <div class="absolute bottom-[-20%] left-[20%] w-[500px] h-[500px] bg-secondary-500/10 rounded-full mix-blend-multiply filter blur-3xl animate-blob" style="animation-delay: 4s;"></div>
+        <div
+            class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-primary-500/10 rounded-full mix-blend-multiply filter blur-3xl animate-blob">
+        </div>
+        <div class="absolute top-[20%] right-[-10%] w-96 h-96 bg-blue-500/10 rounded-full mix-blend-multiply filter blur-3xl animate-blob"
+            style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-[-20%] left-[20%] w-[500px] h-[500px] bg-secondary-500/10 rounded-full mix-blend-multiply filter blur-3xl animate-blob"
+            style="animation-delay: 4s;"></div>
     </div>
     <div class="fixed inset-0 pointer-events-none bg-grid z-[-1]"></div>
 
     <!-- MAIN CONTENT -->
     <main class="max-w-6xl mx-auto px-6 pt-6 md:pt-8 w-full">
-        
+
         <!-- Header / Logo -->
         <header class="flex flex-col items-center justify-center mb-6 md:mb-8 animate-fade-up">
-            <img src="assets/images/logo.jpg" alt="Alvaro SDR Logo" class="h-12 md:h-16 mb-4 object-contain rounded-2xl shadow-sm">
-            
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-sm font-medium text-slate-700 shadow-sm border border-slate-200">
+            <img src="assets/images/logo.jpg" alt="Alvaro SDR Logo"
+                class="h-12 md:h-16 mb-4 object-contain rounded-2xl shadow-sm">
+
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-sm font-medium text-slate-700 shadow-sm border border-slate-200">
                 <div class="flex -space-x-2">
                     <!-- Student avatars -->
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Student 1" class="w-7 h-7 rounded-full border-2 border-white object-cover shadow-sm bg-slate-200">
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Student 2" class="w-7 h-7 rounded-full border-2 border-white object-cover shadow-sm bg-slate-300">
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Student 3" class="w-7 h-7 rounded-full border-2 border-white object-cover shadow-sm bg-slate-400">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Student 4" class="w-7 h-7 rounded-full border-2 border-white object-cover shadow-sm bg-slate-200">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="Student 1"
+                        class="w-7 h-7 rounded-full border-2 border-white object-cover shadow-sm bg-slate-200">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="Student 2"
+                        class="w-7 h-7 rounded-full border-2 border-white object-cover shadow-sm bg-slate-300">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="Student 3"
+                        class="w-7 h-7 rounded-full border-2 border-white object-cover shadow-sm bg-slate-400">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="Student 4"
+                        class="w-7 h-7 rounded-full border-2 border-white object-cover shadow-sm bg-slate-200">
                 </div>
                 <span>+ de 796 alumnos formados</span>
             </div>
@@ -138,91 +158,127 @@
 
         <!-- Headline & Subheadline -->
         <section class="text-center max-w-[1000px] mx-auto mb-8">
-            <h1 class="text-3xl md:text-4xl lg:text-[44px] font-extrabold tracking-tight leading-[1.15] text-slate-900 mb-6 animate-fade-up" style="animation-delay: 0.1s;">
-                Clase para vendedores con experiencia que quieren dar el salto al <span class="text-gradient inline-block">mundo digital</span>
+            <h1 class="text-3xl md:text-4xl lg:text-[44px] font-extrabold tracking-tight leading-[1.15] text-slate-900 mb-6 animate-fade-up"
+                style="animation-delay: 0.1s;">
+                Clase para vendedores con experiencia que quieren dar el salto al <span
+                    class="text-gradient inline-block">mundo digital</span>
             </h1>
-            
+
             <!-- Bullets Checkmarks -->
-            <ul class="flex flex-col md:flex-row shadow-sm glass-card border-slate-100 rounded-2xl py-2 px-5 justify-center gap-3 md:gap-6 text-slate-700 text-sm md:text-base font-medium mb-6 inline-flex animate-fade-up" style="animation-delay: 0.2s;">
+            <ul class="flex flex-col md:flex-row shadow-sm glass-card border-slate-100 rounded-2xl py-2 px-5 justify-center gap-3 md:gap-6 text-slate-700 text-sm md:text-base font-medium mb-6 inline-flex animate-fade-up"
+                style="animation-delay: 0.2s;">
                 <li class="flex items-center gap-2">
-                    <svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                    <svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                    </svg>
                     Teletrabajo
                 </li>
                 <li class="flex items-center gap-2">
-                    <svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                    <svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                    </svg>
                     Proyección de carrera
                 </li>
                 <li class="flex items-center gap-2">
-                    <svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                    <svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                    </svg>
                     Estabilidad económica
                 </li>
             </ul>
 
-            <h2 class="text-xl md:text-2xl font-medium text-slate-800 bg-slate-100 py-3 px-4 rounded-lg inline-block animate-fade-up" style="animation-delay: 0.3s;">
-                Mira gratis la clase introductoria y aprende más de 5 claves reales sobre cómo acceder a un puesto en ventas digitales.
+            <h2 class="text-xl md:text-2xl font-medium text-slate-800 bg-slate-100 py-3 px-4 rounded-lg inline-block animate-fade-up"
+                style="animation-delay: 0.3s;">
+                Mira gratis la clase introductoria y aprende más de 5 claves reales sobre cómo acceder a un puesto en
+                ventas digitales.
             </h2>
         </section>
 
         <!-- Video & Content Row -->
         <section class="grid lg:grid-cols-12 gap-6 lg:gap-8 lg:items-stretch pb-10">
-            
+
             <!-- Video Column -->
-            <div class="lg:col-span-8 relative animate-fade-up group flex flex-col justify-center" style="animation-delay: 0.4s;">
-                <div class="relative bg-black rounded-2xl md:rounded-[2rem] overflow-hidden shadow-2xl aspect-video w-full flex items-center justify-center cursor-pointer border-4 border-white">
+            <div class="lg:col-span-8 relative animate-fade-up group flex flex-col justify-center"
+                style="animation-delay: 0.4s;">
+                <div
+                    class="relative bg-black rounded-2xl md:rounded-[2rem] overflow-hidden shadow-2xl aspect-video w-full flex items-center justify-center cursor-pointer border-4 border-white">
                     <!-- Video Fake Placeholder (can be replaced by iframe) -->
-                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Video cover" class="w-full h-full object-cover opacity-60 transition-opacity duration-300 group-hover:opacity-80">
-                    
+                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+                        alt="Video cover"
+                        class="w-full h-full object-cover opacity-60 transition-opacity duration-300 group-hover:opacity-80">
+
                     <!-- Sound Overlay Modal (Pulse aquí para activar el sonido) -->
                     <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                        <div class="vsl-overlay text-white px-6 py-4 md:px-8 md:py-6 rounded-2xl flex flex-col items-center gap-2 md:gap-3 transform transition-transform group-hover:scale-105 pointer-events-auto cursor-pointer animate-pulse-slow">
+                        <div
+                            class="vsl-overlay text-white px-6 py-4 md:px-8 md:py-6 rounded-2xl flex flex-col items-center gap-2 md:gap-3 transform transition-transform group-hover:scale-105 pointer-events-auto cursor-pointer animate-pulse-slow">
                             <span class="font-semibold text-base md:text-lg">Pulse aquí</span>
                             <svg class="w-12 h-12 md:w-16 md:h-16" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+                                <path
+                                    d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
                             </svg>
                             <span class="font-bold text-base md:text-lg">para activar el sonido</span>
                         </div>
                     </div>
                 </div>
                 <!-- Adjusted smaller text for space saving -->
-                <p class="text-center text-xs md:text-sm font-semibold text-slate-500 mt-4 animate-fade-up" style="animation-delay: 0.5s;">
+                <p class="text-center text-xs md:text-sm font-semibold text-slate-500 mt-4 animate-fade-up"
+                    style="animation-delay: 0.5s;">
                     Si llevas tiempo pensando en un cambio laboral, esto puede ayudarte
                 </p>
             </div>
 
             <!-- Content Bullet Points Column -->
             <div class="lg:col-span-4 flex flex-col justify-center animate-fade-up" style="animation-delay: 0.5s;">
-                
+
                 <div class="glass-card rounded-2xl p-5 lg:p-6 h-full flex flex-col justify-between">
                     <ul class="space-y-4 md:space-y-5 text-slate-700 font-medium text-xs md:text-sm">
                         <li class="flex items-start gap-3">
-                            <span class="mt-1 w-2 h-2 rounded-full bg-primary-500 shrink-0 shadow-[0_0_8px_rgba(20,184,166,0.8)]"></span>
-                            <p class="leading-relaxed">La verdadera oportunidad del rol SDR: entrar por la puerta correcta del crecimiento digital.</p>
+                            <span
+                                class="mt-1 w-2 h-2 rounded-full bg-primary-500 shrink-0 shadow-[0_0_8px_rgba(20,184,166,0.8)]"></span>
+                            <p class="leading-relaxed">La verdadera oportunidad del rol SDR: entrar por la puerta
+                                correcta del crecimiento digital.</p>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="mt-1 w-2 h-2 rounded-full bg-primary-500 shrink-0 shadow-[0_0_8px_rgba(20,184,166,0.8)]"></span>
-                            <p class="leading-relaxed">Cómo acceder a un puesto digital aunque no vengas del sector digital.</p>
+                            <span
+                                class="mt-1 w-2 h-2 rounded-full bg-primary-500 shrink-0 shadow-[0_0_8px_rgba(20,184,166,0.8)]"></span>
+                            <p class="leading-relaxed">Cómo acceder a un puesto digital aunque no vengas del sector
+                                digital.</p>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="mt-1 w-2 h-2 rounded-full bg-primary-500 shrink-0 shadow-[0_0_8px_rgba(20,184,166,0.8)]"></span>
-                            <p class="leading-relaxed">Por qué el SDR tiene más proyección que muchos roles tradicionales de ventas.</p>
+                            <span
+                                class="mt-1 w-2 h-2 rounded-full bg-primary-500 shrink-0 shadow-[0_0_8px_rgba(20,184,166,0.8)]"></span>
+                            <p class="leading-relaxed">Por qué el SDR tiene más proyección que muchos roles
+                                tradicionales de ventas.</p>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="mt-1 w-2 h-2 rounded-full bg-primary-500 shrink-0 shadow-[0_0_8px_rgba(20,184,166,0.8)]"></span>
-                            <p class="leading-relaxed">Qué perfiles están contratando hoy las empresas digitales para ventas.</p>
+                            <span
+                                class="mt-1 w-2 h-2 rounded-full bg-primary-500 shrink-0 shadow-[0_0_8px_rgba(20,184,166,0.8)]"></span>
+                            <p class="leading-relaxed">Qué perfiles están contratando hoy las empresas digitales para
+                                ventas.</p>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="mt-1 w-2 h-2 rounded-full bg-primary-500 shrink-0 shadow-[0_0_8px_rgba(20,184,166,0.8)]"></span>
-                            <p class="leading-relaxed">Por qué vender en digital requiere un método, no solo experiencia.</p>
+                            <span
+                                class="mt-1 w-2 h-2 rounded-full bg-primary-500 shrink-0 shadow-[0_0_8px_rgba(20,184,166,0.8)]"></span>
+                            <p class="leading-relaxed">Por qué vender en digital requiere un método, no solo
+                                experiencia.</p>
                         </li>
                     </ul>
 
                     <!-- CTA Button -->
                     <div class="pt-5 mt-auto">
-                        <button id="btnOpenModal" class="w-full relative px-4 py-3 md:py-4 bg-[#1BB159] text-white rounded-xl font-bold text-base overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_5px_15px_rgba(27,177,89,0.3)] hover:shadow-[0_10px_25px_rgba(27,177,89,0.4)] flex items-center justify-between group outline-none">
-                            <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full duration-700 ease-in-out"></div>
+                        <button id="btnOpenModal"
+                            class="w-full relative px-4 py-3 md:py-4 bg-[#1BB159] text-white rounded-xl font-bold text-base overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_5px_15px_rgba(27,177,89,0.3)] hover:shadow-[0_10px_25px_rgba(27,177,89,0.4)] flex items-center justify-between group outline-none">
+                            <div
+                                class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full duration-700 ease-in-out">
+                            </div>
                             Quiero trabajar en digital
-                            <div class="w-6 h-6 md:w-8 md:h-8 shrink-0 rounded-full bg-black/20 flex items-center justify-center transition-transform group-hover:rotate-45 ml-2">
-                                <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+                            <div
+                                class="w-6 h-6 md:w-8 md:h-8 shrink-0 rounded-full bg-black/20 flex items-center justify-center transition-transform group-hover:rotate-45 ml-2">
+                                <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                                </svg>
                             </div>
                         </button>
                     </div>
@@ -230,353 +286,2129 @@
 
             </div>
         </section>
-    <!-- BENEFITS / GUARANTEES SECTION -->
-    <section class="max-w-5xl mx-auto px-6 pt-4 pb-20 w-full relative z-10 animate-fade-up">
 
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-6">
 
-            <!-- Card 1: Garantía (Bento Large Left) -->
-            <div class="md:col-span-7 glass-card rounded-[2rem] p-8 md:p-10 bg-white/90 border border-primary-100 hover:border-primary-300 hover:shadow-[0_20px_40px_rgba(20,184,166,0.08)] transition-all group relative overflow-hidden flex flex-col justify-center">
-                <div class="absolute -right-20 -top-20 w-64 h-64 bg-primary-100/50 rounded-full blur-3xl -z-10 group-hover:bg-primary-200/50 transition-colors pointer-events-none"></div>
-                
-                <div class="flex flex-col sm:flex-row sm:items-center gap-5 mb-6">
-                    <div class="w-14 h-14 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center shrink-0 border border-primary-100/50 shadow-sm">
-                        <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+
+        <!-- BENEFITS / GUARANTEES SECTION -->
+        <section class="max-w-5xl mx-auto px-6 pt-4 pb-16 lg:pb-10 w-full relative z-10 animate-fade-up">
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-6">
+
+                <!-- Card 1: Garantía (Bento Large Left) -->
+                <div
+                    class="md:col-span-7 glass-card rounded-[2rem] p-8 md:p-10 bg-white/90 border border-primary-100 hover:border-primary-300 hover:shadow-[0_20px_40px_rgba(20,184,166,0.08)] transition-all group relative overflow-hidden flex flex-col justify-center">
+                    <div
+                        class="absolute -right-20 -top-20 w-64 h-64 bg-primary-100/50 rounded-full blur-3xl -z-10 group-hover:bg-primary-200/50 transition-colors pointer-events-none">
                     </div>
-                    <h3 class="text-[19px] md:text-xl font-extrabold text-slate-800 leading-tight">
-                        Garantía de empleabilidad por contrato para alumnos certificados que cumplan el proceso
-                    </h3>
-                </div>
-                <!-- Highlight keywords to reduce reading fatigue -->
-                <p class="text-slate-600 text-[15.5px] md:text-[16.5px] leading-relaxed">
-                    Si completas la certificación y, tras el plazo establecido, no consigues trabajo como SDR en una empresa digital, <strong class="font-bold text-slate-900 bg-primary-50 px-1.5 py-0.5 rounded text-[16px]">te devolvemos el dinero</strong>. La garantía está recogida por contrato y vinculada al cumplimiento del proceso.
-                </p>
-            </div>
 
-            <!-- Card 2: Soporte (Bento Small Right) -->
-            <div class="md:col-span-5 glass-card rounded-[2rem] p-8 md:p-10 bg-white/90 border border-secondary-100 hover:border-secondary-300 hover:shadow-[0_20px_40px_rgba(139,92,246,0.08)] transition-all group relative overflow-hidden flex flex-col justify-center">
-                <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-secondary-100/50 rounded-full blur-3xl -z-10 group-hover:bg-secondary-200/50 transition-colors pointer-events-none"></div>
-                
-                <div class="w-12 h-12 rounded-2xl bg-secondary-50 text-secondary-600 flex items-center justify-center mb-5 shrink-0 border border-secondary-100/50 shadow-sm">
-                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                </div>
-                <h3 class="text-xl font-extrabold text-slate-800 mb-3 leading-tight">
-                    Soporte durante la certificación
-                </h3>
-                <p class="text-slate-600 text-[15px] md:text-[16px] leading-relaxed">
-                    Durante la formación tendrás soporte por escrito para resolver dudas sobre el proceso y los contenidos. El equipo responde en un <strong class="font-bold text-slate-900 border-b-2 border-secondary-200">plazo máximo de 24 horas</strong>, de lunes a viernes, en horario laboral.
-                </p>
-            </div>
-
-            <!-- Card 3: Comunidad (Bento Wide Dark Contrast) -->
-            <div class="md:col-span-12 glass-card rounded-[2rem] p-8 md:p-10 bg-slate-900 border border-slate-800 hover:border-slate-700 hover:shadow-[0_20px_40px_rgba(59,130,246,0.15)] transition-all group relative overflow-hidden flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10">
-                <div class="absolute left-0 top-0 w-full h-full bg-gradient-to-r from-blue-900/40 to-transparent pointer-events-none -z-10"></div>
-                <div class="absolute -left-20 top-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/20 rounded-full blur-[80px] pointer-events-none"></div>
-                
-                <div class="w-16 h-16 md:w-20 md:h-20 rounded-[1.5rem] bg-slate-800 border border-slate-700 text-blue-400 flex items-center justify-center shrink-0 shadow-inner group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
-                    <svg class="w-8 h-8 md:w-10 md:h-10 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-                </div>
-                
-                <div class="flex-1 relative z-10">
-                    <h3 class="text-[22px] md:text-2xl font-extrabold text-white mb-3 tracking-tight">
-                        Comunidad de alumnos y alumni
-                    </h3>
-                    <p class="text-slate-400 text-[16px] md:text-[17.5px] leading-relaxed font-medium">
-                        Durante la formación formarás parte de la comunidad de alumnos de <strong class="text-white font-bold tracking-wide">Yinius.io</strong> y, al finalizar, de su red de alumni. Un entorno donde compartir proceso, aprendizaje y experiencias con personas que buscan el mismo salto profesional.
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-5 mb-6">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center shrink-0 border border-primary-100/50 shadow-sm">
+                            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-[19px] md:text-xl font-extrabold text-slate-800 leading-tight">
+                            Garantía de empleabilidad por contrato para alumnos certificados que cumplan el proceso
+                        </h3>
+                    </div>
+                    <!-- Highlight keywords to reduce reading fatigue -->
+                    <p class="text-slate-600 text-[15.5px] md:text-[16.5px] leading-relaxed">
+                        Si completas la certificación y, tras el plazo establecido, no consigues trabajo como SDR en una
+                        empresa digital, <strong
+                            class="font-bold text-slate-900 bg-primary-50 px-1.5 py-0.5 rounded text-[16px]">te
+                            devolvemos el dinero</strong>. La garantía está recogida por contrato y vinculada al
+                        cumplimiento del proceso.
                     </p>
                 </div>
+
+                <!-- Card 2: Soporte (Bento Small Right) -->
+                <div
+                    class="md:col-span-5 glass-card rounded-[2rem] p-8 md:p-10 bg-white/90 border border-secondary-100 hover:border-secondary-300 hover:shadow-[0_20px_40px_rgba(139,92,246,0.08)] transition-all group relative overflow-hidden flex flex-col justify-center">
+                    <div
+                        class="absolute -right-10 -bottom-10 w-48 h-48 bg-secondary-100/50 rounded-full blur-3xl -z-10 group-hover:bg-secondary-200/50 transition-colors pointer-events-none">
+                    </div>
+
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-secondary-50 text-secondary-600 flex items-center justify-center mb-5 shrink-0 border border-secondary-100/50 shadow-sm">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-800 mb-3 leading-tight">
+                        Soporte durante la certificación
+                    </h3>
+                    <p class="text-slate-600 text-[15px] md:text-[16px] leading-relaxed">
+                        Durante la formación tendrás soporte por escrito para resolver dudas sobre el proceso y los
+                        contenidos. El equipo responde en un <strong
+                            class="font-bold text-slate-900 border-b-2 border-secondary-200">plazo máximo de 24
+                            horas</strong>, de lunes a viernes, en horario laboral.
+                    </p>
+                </div>
+
+                <!-- Card 3: Comunidad (Bento Wide Dark Contrast) -->
+                <div
+                    class="md:col-span-12 glass-card rounded-[2rem] p-8 md:p-10 bg-slate-900 border border-slate-800 hover:border-slate-700 hover:shadow-[0_20px_40px_rgba(59,130,246,0.15)] transition-all group relative overflow-hidden flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10">
+                    <div
+                        class="absolute left-0 top-0 w-full h-full bg-gradient-to-r from-blue-900/40 to-transparent pointer-events-none -z-10">
+                    </div>
+                    <div
+                        class="absolute -left-20 top-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/20 rounded-full blur-[80px] pointer-events-none">
+                    </div>
+
+                    <div
+                        class="w-16 h-16 md:w-20 md:h-20 rounded-[1.5rem] bg-slate-800 border border-slate-700 text-blue-400 flex items-center justify-center shrink-0 shadow-inner group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                        <svg class="w-8 h-8 md:w-10 md:h-10 relative z-10" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+
+                    <div class="flex-1 relative z-10">
+                        <h3 class="text-[22px] md:text-2xl font-extrabold text-white mb-3 tracking-tight">
+                            Comunidad de alumnos y alumni
+                        </h3>
+                        <p class="text-slate-400 text-[16px] md:text-[17.5px] leading-relaxed font-medium">
+                            Durante la formación formarás parte de la comunidad de alumnos de <strong
+                                class="text-white font-bold tracking-wide">Yinius.io</strong> y, al finalizar, de su red
+                            de alumni. Un entorno donde compartir proceso, aprendizaje y experiencias con personas que
+                            buscan el mismo salto profesional.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- REAL RESULTS SECTION -->
+        <section
+            class="max-w-6xl mx-auto px-4 md:px-6 pt-12 lg:pt-8 pb-10 lg:pb-12 w-full relative z-10 overflow-visible">
+
+            <!-- Subtle Background Glow -->
+            <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-center pointer-events-none -z-10">
+                <div class="w-[80vw] max-w-[800px] h-[500px] bg-primary-100/40 rounded-full blur-[120px]"></div>
             </div>
 
-        </div>
-    </section>
+            <div class="flex flex-col items-center text-center max-w-[900px] mx-auto mb-6 md:mb-8 animate-fade-up">
+                <!-- Premium Badge -->
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card text-xs md:text-[13px] font-bold text-primary-600 shadow-sm border border-primary-200/50 mb-4 uppercase tracking-wider bg-white/60">
+                    <span
+                        class="w-2 h-2 rounded-full bg-primary-500 shadow-[0_0_8px_rgba(20,184,166,0.8)] animate-pulse"></span>
+                    Resultados Comprobados
+                </div>
 
-    <!-- Multi-Step Modal Overlay -->
-    <div id="applicationModal" class="fixed inset-0 z-50 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
-        <!-- Backdrop -->
-        <div id="modalBackdrop" class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm cursor-pointer"></div>
-        
-        <!-- Modal Container -->
-        <div class="relative bg-white rounded-3xl shadow-2xl w-full max-w-lg mx-4 transform scale-95 opacity-0 transition-all duration-300 overflow-hidden" id="modalContent">
-            
-            <!-- Header with Close & Progress -->
-            <div class="px-6 py-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
-                <h3 class="text-lg font-bold text-slate-800">Candidatura</h3>
-                <button id="btnCloseModal" class="text-slate-400 hover:text-red-500 transition-colors bg-white rounded-full p-1 shadow-sm border border-slate-200 hover:rotate-90">
-                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                <h2
+                    class="text-2xl md:text-[28px] lg:text-[32px] font-extrabold text-slate-800 leading-[1.25] tracking-tight">
+                    Sin duda, uno de los métodos con
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">más
+                        resultados reales</span>
+                    para acceder a un puesto en ventas digitales, tras completar la certificación y seguir el proceso
+                </h2>
+            </div>
+
+            <!-- Image Presentation -->
+            <div class="relative group mx-auto max-w-5xl animate-fade-up" style="animation-delay: 0.2s;">
+                <!-- Decorative blur shadow behind the image -->
+                <div
+                    class="absolute -inset-2 md:-inset-6 bg-gradient-to-r from-primary-400 via-secondary-300 to-blue-400 opacity-20 blur-2xl rounded-3xl md:rounded-[4rem] group-hover:opacity-40 group-hover:blur-3xl transition-all duration-700">
+                </div>
+
+                <!-- The Image Glass Frame -->
+                <div
+                    class="relative glass-card bg-white/40 p-1.5 md:p-5 rounded-2xl md:rounded-[3rem] border border-white/80 shadow-[0_20px_60px_rgba(15,23,42,0.08)] overflow-hidden">
+                    <img src="assets/images/imagem1.png" alt="Comunidad de alumnos certificados Yinius"
+                        class="w-full h-auto rounded-xl md:rounded-[2.5rem] object-cover transform transition-transform duration-1000 group-hover:scale-[1.03] shadow-inner">
+
+                    <!-- Elegant Vignette Overlay -->
+                    <div
+                        class="absolute inset-0 rounded-2xl md:rounded-[3rem] bg-gradient-to-t from-slate-900/20 to-transparent pointer-events-none mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ALUMNOS CONTRATADOS / INFINITE SCROLL CAROUSEL -->
+        <style>
+            @keyframes scroll-infinite {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+
+            .marquee-track {
+                display: flex;
+                width: max-content;
+                animation: scroll-infinite 50s linear infinite;
+            }
+
+            .marquee-track:hover {
+                animation-play-state: paused;
+            }
+        </style>
+
+        <section class="w-full relative z-10 pt-10 pb-12 overflow-hidden mb-12">
+            <!-- Section Header -->
+            <div class="text-center mb-10 px-6 animate-fade-up">
+                <h3 class="text-xs md:text-sm font-extrabold text-primary-600 uppercase tracking-[0.2em] mb-2">Casos de
+                    Éxito</h3>
+                <p class="text-lg md:text-xl lg:text-2xl font-extrabold text-slate-800 tracking-tight">Empresas
+                    digitales, alumnos certificados y datos objetivos lo respaldan:</p>
+            </div>
+
+            <!-- Marquee Container -->
+            <div class="relative w-full overflow-hidden flex items-center">
+
+                <!-- Fade Vignettes (Softens edges) -->
+                <div
+                    class="absolute inset-y-0 left-0 w-16 md:w-36 bg-gradient-to-r from-[#f8fafc] to-transparent z-20 pointer-events-none">
+                </div>
+                <div
+                    class="absolute inset-y-0 right-0 w-16 md:w-36 bg-gradient-to-l from-[#f8fafc] to-transparent z-20 pointer-events-none">
+                </div>
+
+                <!-- The Scrolling Track -->
+                <div class="marquee-track items-center py-4">
+
+                    <!-- Set 1 (13 Items) -->
+                    <div class="flex items-start gap-8 md:gap-14 px-4 md:px-7">
+                        <!-- Photo 4 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/4.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(20,184,166,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p class="text-primary-600 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                SDR Tech</p>
+                        </div>
+                        <!-- Photo 5 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/5.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(20,184,166,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p class="text-primary-600 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                Ventas</p>
+                        </div>
+                        <!-- Photo 6 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/6.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(139,92,246,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p
+                                class="text-secondary-500 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                Startup</p>
+                        </div>
+                        <!-- Photo 7 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/7.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(20,184,166,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p class="text-primary-600 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                Agencia</p>
+                        </div>
+                        <!-- Photo 8 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/8.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(20,184,166,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p class="text-primary-600 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                B2B Tech</p>
+                        </div>
+                        <!-- Photo 9 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/9.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(139,92,246,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p
+                                class="text-secondary-500 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                SaaS</p>
+                        </div>
+                        <!-- Photo 10 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/10.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(20,184,166,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p class="text-primary-600 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                SDR Lead</p>
+                        </div>
+                        <!-- Photo 11 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/11.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(20,184,166,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p class="text-primary-600 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                Tech Corp</p>
+                        </div>
+                        <!-- Photo 12 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/12.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(139,92,246,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p
+                                class="text-secondary-500 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                Ventas B2B</p>
+                        </div>
+                        <!-- Photo 13 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/13.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(20,184,166,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p class="text-primary-600 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                Digital PR</p>
+                        </div>
+                        <!-- Photo 14 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/14.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(20,184,166,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p class="text-primary-600 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                SDR Tech</p>
+                        </div>
+                        <!-- Photo 15 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/15.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(139,92,246,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p
+                                class="text-secondary-500 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                Agencia It</p>
+                        </div>
+                        <!-- Photo 16 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/16.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(20,184,166,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p class="text-primary-600 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                Manager</p>
+                        </div>
+                    </div>
+
+                    <!-- Set 2 (Exact Duplicate for Seamless Infinite Loop) -->
+                    <div class="flex items-start gap-8 md:gap-14 px-4 md:px-7" aria-hidden="true">
+                        <!-- Photo 4 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/4.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(20,184,166,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p class="text-primary-600 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                SDR Tech</p>
+                        </div>
+                        <!-- Photo 5 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/5.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(20,184,166,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p class="text-primary-600 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                Ventas</p>
+                        </div>
+                        <!-- Photo 6 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/6.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(139,92,246,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p
+                                class="text-secondary-500 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                Startup</p>
+                        </div>
+                        <!-- Photo 7 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/7.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(20,184,166,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p class="text-primary-600 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                Agencia</p>
+                        </div>
+                        <!-- Photo 8 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/8.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(20,184,166,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p class="text-primary-600 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                B2B Tech</p>
+                        </div>
+                        <!-- Photo 9 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/9.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(139,92,246,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p
+                                class="text-secondary-500 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                SaaS</p>
+                        </div>
+                        <!-- Photo 10 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/10.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(20,184,166,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p class="text-primary-600 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                SDR Lead</p>
+                        </div>
+                        <!-- Photo 11 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/11.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(20,184,166,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p class="text-primary-600 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                Tech Corp</p>
+                        </div>
+                        <!-- Photo 12 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/12.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(139,92,246,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p
+                                class="text-secondary-500 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                Ventas B2B</p>
+                        </div>
+                        <!-- Photo 13 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/13.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(20,184,166,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p class="text-primary-600 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                Digital PR</p>
+                        </div>
+                        <!-- Photo 14 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/14.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(20,184,166,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p class="text-primary-600 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                SDR Tech</p>
+                        </div>
+                        <!-- Photo 15 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/15.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(139,92,246,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p
+                                class="text-secondary-500 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                Agencia It</p>
+                        </div>
+                        <!-- Photo 16 -->
+                        <div
+                            class="flex flex-col items-center w-24 md:w-32 flex-shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="IMAGENES VSL (1)/16.png" loading="lazy"
+                                class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-[0_10px_25px_rgba(20,184,166,0.15)] border-[3px] border-white mb-3">
+                            <p class="font-bold text-slate-800 text-sm text-center leading-tight">Alumno</p>
+                            <p class="text-primary-600 text-[11px] text-center font-bold mt-1 uppercase tracking-wide">
+                                Manager</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section
+            class="max-w-7xl mx-auto px-4 md:px-6 pt-10 pb-4 lg:pt-12 lg:pb-8 w-full relative z-10 overflow-visible bg-transparent">
+
+            <!-- Neutral Background Decor -->
+            <div
+                class="absolute inset-x-0 top-0 h-full bg-gradient-to-b from-slate-50/0 via-slate-50/80 to-slate-50/0 pointer-events-none -z-10">
+            </div>
+
+            <!-- Section Header -->
+            <div class="flex flex-col items-center text-center max-w-[800px] mx-auto mb-10 md:mb-12 animate-fade-up">
+                <h2
+                    class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-800 leading-[1.25] tracking-tight mb-4">
+                    Desafiamos a cualquier otro método a mostrar
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">más
+                        resultados reales en ventas digitales</span> en España
+                </h2>
+                <p class="text-[17px] md:text-lg font-bold text-slate-600 leading-snug tracking-wide">
+                    El Método que ha conseguido que tengamos un 94% de efectividad para conseguir trabajo con cientos de
+                    alumnos certificados.
+                </p>
+            </div>
+
+            <!-- Perfect 3-Column Grid Layout for Information Density -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto mb-4 animate-fade-up items-stretch"
+                style="animation-delay: 0.1s;">
+
+                <!-- Depoimento 1 -->
+                <div
+                    class="bg-white rounded-[2rem] p-3 md:p-4 shadow-sm border border-slate-100/80 hover:shadow-[0_20px_40px_rgba(15,23,42,0.06)] hover:-translate-y-1.5 transition-all duration-500 group flex flex-col h-full w-full">
+                    <div
+                        class="rounded-3xl overflow-hidden relative bg-slate-50 border border-slate-50 flex items-center justify-center flex-grow">
+                        <!-- Vignette soft inner shadow -->
+                        <div
+                            class="absolute inset-0 ring-1 ring-inset ring-slate-900/5 rounded-3xl pointer-events-none z-10">
+                        </div>
+                        <img src="IMAGENES VSL (1)/17.png" alt="Prueba Social Alumno 1" loading="lazy"
+                            class="w-full h-auto object-contain transform transition-transform duration-700 group-hover:scale-[1.03]">
+                    </div>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div
+                    class="bg-white rounded-[2rem] p-3 md:p-4 shadow-sm border border-slate-100/80 hover:shadow-[0_20px_40px_rgba(15,23,42,0.06)] hover:-translate-y-1.5 transition-all duration-500 group flex flex-col h-full w-full">
+                    <div
+                        class="rounded-3xl overflow-hidden relative bg-slate-50 border border-slate-50 flex items-center justify-center flex-grow">
+                        <div
+                            class="absolute inset-0 ring-1 ring-inset ring-slate-900/5 rounded-3xl pointer-events-none z-10">
+                        </div>
+                        <img src="IMAGENES VSL (1)/18.png" alt="Prueba Social Alumno 2" loading="lazy"
+                            class="w-full h-auto object-contain transform transition-transform duration-700 group-hover:scale-[1.03]">
+                    </div>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div
+                    class="bg-white rounded-[2rem] p-3 md:p-4 shadow-sm border border-slate-100/80 hover:shadow-[0_20px_40px_rgba(15,23,42,0.06)] hover:-translate-y-1.5 transition-all duration-500 group flex flex-col h-full w-full md:col-span-2 lg:col-span-1 max-w-[500px] md:mx-auto lg:max-w-none">
+                    <div
+                        class="rounded-3xl overflow-hidden relative bg-slate-50 border border-slate-50 flex items-center justify-center flex-grow">
+                        <div
+                            class="absolute inset-0 ring-1 ring-inset ring-slate-900/5 rounded-3xl pointer-events-none z-10">
+                        </div>
+                        <img src="IMAGENES VSL (1)/19.png" alt="Prueba Social Alumno 3" loading="lazy"
+                            class="w-full h-auto object-contain transform transition-transform duration-700 group-hover:scale-[1.03]">
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DISRUPTIVE CTA SECTION -->
+        <section
+            class="max-w-5xl mx-auto px-4 md:px-6 py-8 lg:py-10 w-full relative z-10 overflow-hidden rounded-[2.5rem] md:rounded-[3rem] group mt-4 mb-8 bg-slate-900 border border-slate-800 shadow-[0_30px_60px_rgba(0,0,0,0.15)] text-center">
+            <!-- Disruptive Glass / Blur Backgrounds -->
+            <div
+                class="absolute top-[-20%] left-[-10%] w-96 h-96 bg-primary-600/30 rounded-full blur-[100px] mix-blend-screen pointer-events-none group-hover:bg-primary-500/40 transition-colors duration-700">
+            </div>
+            <div
+                class="absolute bottom-[-20%] right-[-10%] w-96 h-96 bg-secondary-600/30 rounded-full blur-[100px] mix-blend-screen pointer-events-none group-hover:bg-secondary-500/40 transition-colors duration-700">
+            </div>
+
+            <div class="relative z-10 flex flex-col items-center max-w-3xl mx-auto px-4">
+                <h2
+                    class="text-2xl md:text-3xl lg:text-[34px] font-black text-white leading-[1.25] tracking-tight mb-8 animate-fade-up">
+                    Dudo que puedas leer estas historias<br>y no querer lo mismo para ti
+                </h2>
+
+                <div class="space-y-3 mb-10 animate-fade-up" style="animation-delay: 0.1s;">
+                    <p class="text-lg md:text-xl font-bold text-slate-300">
+                        Ahora imagina qué habrían perdido si no hubieran dado el paso.
+                    </p>
+                    <p class="text-base md:text-lg font-bold text-slate-400">
+                        No decidir también tiene un precio
+                    </p>
+                </div>
+
+                <div class="animate-fade-up" style="animation-delay: 0.2s;">
+                    <button onclick="document.getElementById('openModalBtn').click()"
+                        class="relative inline-flex items-center justify-center px-8 md:px-14 py-5 md:py-6 font-extrabold text-white text-lg md:text-xl transition-all duration-500 bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 rounded-[2rem] hover:scale-105 hover:shadow-[0_0_50px_rgba(236,72,153,0.6)] focus:outline-none overflow-hidden group/btn border border-white/20">
+                        <span class="relative z-10 drop-shadow-sm">Unirme ahora al Método Yinius.io</span>
+                        <div
+                            class="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000">
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PROCESS BENTO GRID SECTION -->
+        <section class="max-w-7xl mx-auto px-4 md:px-6 py-20 w-full relative z-10 overflow-visible mb-10">
+            <div class="text-center max-w-4xl mx-auto mb-16 animate-fade-up">
+                <h2
+                    class="text-3xl md:text-5xl lg:text-[52px] font-black text-slate-800 tracking-tight leading-[1.1] mb-6">
+                    Un proceso claro, paso a paso,<br>con un <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">objetivo
+                        concreto</span>
+                </h2>
+                <div
+                    class="inline-flex flex-wrap justify-center gap-3 text-slate-700 text-[15px] md:text-[17px] font-bold">
+                    <span
+                        class="bg-white px-4 py-2 rounded-xl shadow-[0_4px_15px_rgba(0,0,0,0.03)] border border-slate-100/50">Empiezas
+                        desde cero</span>
+                    <span
+                        class="bg-white px-4 py-2 rounded-xl shadow-[0_4px_15px_rgba(0,0,0,0.03)] border border-slate-100/50">Base
+                        del Método Yinius</span>
+                    <span
+                        class="bg-white px-4 py-2 rounded-xl shadow-[0_4px_15px_rgba(0,0,0,0.03)] border border-slate-100/50">Pasos
+                        sencillos y alcanzables</span>
+                </div>
+            </div>
+
+            <!-- Bento Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 relative animate-fade-up" style="animation-delay: 0.1s;">
+
+                <!-- Global subtle connecting background -->
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-[3rem] -z-10 blur-3xl pointer-events-none">
+                </div>
+
+                <!-- Fase 1: Formación (Large Col-7 Dark) -->
+                <div
+                    class="md:col-span-7 relative group overflow-hidden rounded-[2.5rem] p-8 md:p-10 bg-slate-900 border border-slate-800 shadow-2xl hover:border-blue-500/50 transition-colors duration-500 flex flex-col justify-between min-h-[320px]">
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-blue-600/20 rounded-full blur-[80px] pointer-events-none group-hover:bg-blue-500/30 transition-colors duration-700">
+                    </div>
+
+                    <div class="relative z-10 mb-8">
+                        <span
+                            class="inline-block px-4 py-1.5 rounded-full bg-blue-500/20 text-blue-400 font-bold text-sm mb-4 tracking-wide uppercase border border-blue-500/30">Fase
+                            1</span>
+                        <h3 class="text-2xl md:text-3xl font-black text-white mb-2">Formación</h3>
+                    </div>
+
+                    <div class="relative z-10 flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4 mt-auto">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0 border border-white/5">
+                                <svg class="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span class="text-slate-300 font-medium text-[15px]">Prospección comercial</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0 border border-white/5">
+                                <svg class="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span class="text-slate-300 font-medium text-[15px]">Role Play y Softskills</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0 border border-white/5">
+                                <svg class="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span class="text-slate-300 font-medium text-[15px]">Mentalidad SDR</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0 border border-white/5">
+                                <svg class="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span class="text-slate-300 font-medium text-[15px]">Proyectos (aprob. 90%)</span>
+                        </div>
+                        <div class="flex items-center gap-3 sm:col-span-2">
+                            <div
+                                class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0 border border-white/5">
+                                <svg class="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg></div>
+                            <span class="text-slate-300 font-medium text-[15px]">Autogeneración de entrevistas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fase 2: Búsqueda (Large Col-5 Light Glass) -->
+                <div
+                    class="md:col-span-5 relative group overflow-hidden rounded-[2.5rem] p-8 md:p-10 glass-card bg-white/80 border border-white shadow-[0_15px_40px_rgba(0,0,0,0.06)] hover:border-purple-300 transition-colors duration-500 flex flex-col justify-between min-h-[320px]">
+                    <div
+                        class="absolute bottom-0 right-0 w-48 h-48 bg-purple-500/10 rounded-full blur-[60px] pointer-events-none group-hover:bg-purple-500/20 transition-colors duration-700">
+                    </div>
+
+                    <div class="relative z-10 mb-6 flex-1">
+                        <div class="flex justify-between items-start mb-4">
+                            <span
+                                class="inline-block px-4 py-1.5 rounded-full bg-purple-100 text-purple-700 font-bold text-sm tracking-wide uppercase">Fase
+                                2</span>
+                            <!-- 5 Meses marker -->
+                            <div
+                                class="flex flex-col items-center justify-center w-[72px] h-[72px] bg-slate-900 border-[4px] border-white rounded-full shadow-lg transform rotate-[-6deg] group-hover:rotate-0 transition-transform duration-500">
+                                <span
+                                    class="text-white text-[13px] font-black leading-[1.1] text-center">5<br>meses</span>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-black text-slate-800 mb-2">Búsqueda de trabajo</h3>
+                        <p class="text-[14px] font-semibold text-slate-500">Aprendes la aplicación Yinius. Método para:
+                        </p>
+                    </div>
+
+                    <div class="relative z-10 flex flex-col gap-3 mt-auto">
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="w-2 h-2 rounded-full bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.8)] shrink-0"></span>
+                            <span class="text-slate-700 font-semibold text-[15px] leading-tight">Autogeneración de
+                                entrevistas</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="w-2 h-2 rounded-full bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.8)] shrink-0"></span>
+                            <span class="text-slate-700 font-semibold text-[15px] leading-tight">Hacer buenas
+                                entrevistas</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="w-2 h-2 rounded-full bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.8)] shrink-0"></span>
+                            <span class="text-slate-700 font-semibold text-[15px] leading-tight">Negociación de
+                                condiciones</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="w-2 h-2 rounded-full bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.8)] shrink-0"></span>
+                            <span class="text-slate-700 font-semibold text-[15px] leading-tight">Sesiones en directo
+                                Hiring</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fase 3: Conexiones (Col-4 Clear Glass) -->
+                <div
+                    class="md:col-span-4 relative group rounded-[2.5rem] p-7 md:p-8 glass-card bg-white/70 border border-white shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.08)] transition-all duration-500 border-t-[6px] border-t-[#14b8a6]">
+                    <span
+                        class="inline-block px-3 py-1 rounded-md bg-[#14b8a6]/10 text-[#0d9488] font-bold text-xs mb-3 uppercase tracking-wider">Fase
+                        3</span>
+                    <h3 class="text-xl font-black text-slate-800 mb-4 line-clamp-2 leading-tight">Conexiones con
+                        empresas</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-[#14b8a6] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                            <span class="text-slate-600 font-medium text-[14px] leading-snug">Conexión con empresas para
+                                contratación</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-[#14b8a6] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                            <span class="text-slate-600 font-medium text-[14px] leading-snug">Autogeneración de
+                                entrevistas</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Fase 4: Prácticas (Col-4 Clear Glass) -->
+                <div
+                    class="md:col-span-4 relative group rounded-[2.5rem] p-7 md:p-8 glass-card bg-white/70 border border-white shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.08)] transition-all duration-500 border-t-[6px] border-t-blue-500">
+                    <span
+                        class="inline-block px-3 py-1 rounded-md bg-blue-500/10 text-blue-600 font-bold text-xs mb-3 uppercase tracking-wider">Fase
+                        4</span>
+                    <h3 class="text-xl font-black text-slate-800 mb-4 line-clamp-2 leading-tight">Prácticas
+                        (voluntarias)</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-blue-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                            <span class="text-slate-600 font-medium text-[14px] leading-snug">Conexión con empresas para
+                                prácticas</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-blue-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                            <span class="text-slate-600 font-medium text-[14px] leading-snug">Realización de
+                                prácticas</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Fase 5: Soporte (Col-4 Dark Contrast) -->
+                <div
+                    class="md:col-span-4 relative group overflow-hidden rounded-[2.5rem] p-7 md:p-8 bg-slate-900 border border-slate-800 shadow-[0_15px_40px_rgba(0,0,0,0.15)] hover:border-slate-600 transition-colors duration-500">
+                    <div
+                        class="absolute inset-0 bg-blue-500/5 group-hover:bg-blue-500/10 transition-colors duration-700 pointer-events-none">
+                    </div>
+
+                    <div class="relative z-10 flex flex-col h-full justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span
+                                    class="inline-block px-3 py-1 rounded-md bg-white/10 text-white font-bold text-xs uppercase tracking-wider border border-white/20">Fase
+                                    5</span>
+                                <!-- 12 Meses marker -->
+                                <div
+                                    class="flex items-center justify-center px-4 py-1.5 bg-blue-600 border border-blue-400 rounded-full shadow-lg transform rotate-6 group-hover:rotate-0 transition-transform duration-500 relative z-20">
+                                    <span class="text-white text-[12px] font-black uppercase tracking-widest">12
+                                        meses</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-black text-white mb-3 leading-tight">Soporte por escrito</h3>
+                            <p class="text-slate-300 font-medium text-[14px] leading-relaxed">
+                                Asesoramiento en tus primeros meses como SDR.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 3 PATHWAYS SECTION -->
+        <section class="max-w-[1300px] mx-auto px-4 md:px-6 pt-12 pb-6 w-full relative z-10">
+            <div class="text-center mb-12 animate-fade-up">
+                <h2 class="text-2xl md:text-3xl lg:text-[40px] font-black text-slate-800 tracking-tight uppercase">
+                    Las 3 vías para conseguir tu puesto como SDR
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch animate-fade-up"
+                style="animation-delay: 0.1s;">
+
+                <!-- Vía 1 -->
+                <div
+                    class="glass-card bg-white rounded-3xl p-6 md:p-8 flex flex-col h-full border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(139,92,246,0.08)] hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-black text-lg shrink-0 border border-purple-200 shadow-sm">
+                            1</div>
+                        <h3
+                            class="text-[15px] md:text-[16px] font-black text-slate-800 uppercase tracking-wide leading-tight">
+                            Vía 01 — Generación de entrevistas por tu cuenta
+                        </h3>
+                    </div>
+
+                    <div class="mb-6">
+                        <p class="text-sm font-bold text-slate-800 mb-1">Qué es:</p>
+                        <p class="text-[15px] font-medium text-slate-600 leading-relaxed italic">
+                            Aprendes a generar tus propias entrevistas aplicando el Método Yinius.
+                        </p>
+                    </div>
+
+                    <div class="mb-8">
+                        <p class="text-[15px] font-medium text-slate-700 leading-relaxed italic">
+                            No dependes de nadie para encontrar trabajo.<br>
+                            Desarrollas una habilidad que te acompañará toda tu carrera profesional.
+                        </p>
+                    </div>
+
+                    <div class="mt-auto pt-5 border-t border-slate-100/80">
+                        <p class="text-sm font-bold text-slate-800 mb-1">Traducción emocional:</p>
+                        <p class="text-[15.5px] font-bold text-purple-600 italic tracking-wide">
+                            "No espero oportunidades. Sé crearlas."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Vía 2 -->
+                <div
+                    class="glass-card bg-white rounded-3xl p-6 md:p-8 flex flex-col h-full border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(139,92,246,0.08)] hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-black text-lg shrink-0 border border-purple-200 shadow-sm">
+                            2</div>
+                        <h3
+                            class="text-[15px] md:text-[16px] font-black text-slate-800 uppercase tracking-wide leading-tight">
+                            Vía 02 — Conexión con empresas para tu contratación
+                        </h3>
+                    </div>
+
+                    <div class="mb-6">
+                        <p class="text-sm font-bold text-slate-800 mb-1">Qué es:</p>
+                        <p class="text-[15px] font-medium text-slate-600 leading-relaxed italic">
+                            Si tras aplicar la vía 1 no lo consigues, te conectamos con empresas digitales que buscan
+                            contratar SDRs.
+                        </p>
+                    </div>
+
+                    <div class="mb-8">
+                        <p class="text-[15px] font-medium text-slate-700 leading-relaxed italic">
+                            No estás solo en el proceso.<br>
+                            Accedes a empresas reales que ya entienden el rol y el método.
+                        </p>
+                    </div>
+
+                    <div class="mt-auto pt-5 border-t border-slate-100/80">
+                        <p class="text-sm font-bold text-slate-800 mb-1">Traducción emocional:</p>
+                        <p class="text-[15.5px] font-bold text-purple-600 italic tracking-wide">
+                            "No empiezo desde cero. Entro con contexto."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Vía 3 -->
+                <div
+                    class="glass-card bg-white rounded-3xl p-6 md:p-8 flex flex-col h-full border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(139,92,246,0.08)] hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-black text-lg shrink-0 border border-purple-200 shadow-sm">
+                            3</div>
+                        <h3
+                            class="text-[15px] md:text-[16px] font-black text-slate-800 uppercase tracking-wide leading-tight">
+                            Vía 03 — Prácticas voluntarias en empresa digital
+                        </h3>
+                    </div>
+
+                    <div class="mb-6">
+                        <p class="text-sm font-bold text-slate-800 mb-1">Qué es:</p>
+                        <p class="text-[15px] font-medium text-slate-600 leading-relaxed italic">
+                            Si no lo consigues ni por la vía 1 ni por la vía 2, puedes realizar prácticas en una empresa
+                            digital que busca contratar.
+                        </p>
+                    </div>
+
+                    <div class="mb-8">
+                        <p class="text-[15px] font-medium text-slate-700 leading-relaxed italic">
+                            No son obligatorias. Son una opción más.<br>
+                            Aquí demuestras en un entorno real por qué mereces quedarte.
+                        </p>
+                    </div>
+
+                    <div class="mt-auto pt-5 border-t border-slate-100/80">
+                        <p class="text-sm font-bold text-slate-800 mb-1">Traducción emocional:</p>
+                        <p class="text-[15.5px] font-bold text-purple-600 italic tracking-wide">
+                            "Puedo demostrar lo que valgo, haciendo."
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SMALL CTA SECTION AT THE END OF 3 VÍAS -->
+        <section class="max-w-4xl mx-auto px-4 md:px-6 pt-2 pb-12 w-full text-center">
+            <h2 class="text-xl md:text-2xl font-bold text-slate-800 tracking-wide mb-8">
+                A quienes siguen el camino, les empiezan a pasar cosas.
+            </h2>
+
+            <button id="btnOpenModal"
+                class="relative inline-flex px-8 py-4 md:px-12 md:py-5 bg-gradient-to-r from-red-600 via-purple-600 to-blue-600 text-white rounded-full font-black text-lg md:text-xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_15px_35px_rgba(168,85,247,0.4)] hover:shadow-[0_20px_45px_rgba(168,85,247,0.6)] group outline-none">
+                <div
+                    class="absolute inset-0 w-full h-full bg-white/20 -translate-x-full group-hover:translate-x-full duration-700 ease-in-out">
+                </div>
+                Unirme ahora al Método Yinius.io
+            </button>
+        </section>
+        <!-- SEGMENTATION SECTION: DOS PERFILES -->
+        <section class="max-w-7xl mx-auto px-4 md:px-6 py-12 lg:py-16 w-full relative z-10">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-stretch animate-fade-up">
+
+                <!-- Perfil 1: Desde Cero -->
+                <div
+                    class="glass-card bg-white rounded-[2.5rem] p-8 md:p-10 border border-slate-100 shadow-[0_20px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_25px_50px_rgba(37,99,235,0.06)] hover:border-blue-100 transition-all duration-300 flex flex-col h-full relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-[80px] pointer-events-none group-hover:bg-blue-500/10 transition-colors duration-700">
+                    </div>
+
+                    <div class="flex items-center gap-4 mb-8 relative z-10">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-100/50 shadow-sm relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-100 to-transparent opacity-50">
+                            </div>
+                            <svg class="w-7 h-7 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl md:text-[28px] font-black text-slate-800 leading-[1.15]">
+                            Si estás empezando<br><span class="text-blue-600">desde cero</span>
+                        </h3>
+                    </div>
+
+                    <div class="space-y-6 flex-1 relative z-10">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="mt-2 w-2 h-2 rounded-full bg-blue-500 shrink-0 shadow-[0_0_8px_rgba(59,130,246,0.5)]">
+                            </div>
+                            <p class="text-[15.5px] md:text-[16.5px] font-medium text-slate-600 leading-relaxed">
+                                Si vienes de ventas, atención al público o de un entorno que no es digital, <strong
+                                    class="text-slate-800">no estás en desventaja.</strong> Simplemente nadie te ha
+                                enseñado cómo funciona realmente este mercado.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="mt-2 w-2 h-2 rounded-full bg-blue-500 shrink-0 shadow-[0_0_8px_rgba(59,130,246,0.5)]">
+                            </div>
+                            <p class="text-[15.5px] md:text-[16.5px] font-medium text-slate-600 leading-relaxed">
+                                La mayoría de personas que hoy trabajan como SDR en empresas digitales empezaron
+                                exactamente en este punto: <strong class="text-slate-800">sin experiencia digital
+                                    previa, pero con actitud y método.</strong>
+                            </p>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="mt-2 w-2 h-2 rounded-full bg-blue-500 shrink-0 shadow-[0_0_8px_rgba(59,130,246,0.5)]">
+                            </div>
+                            <p class="text-[15.5px] md:text-[16.5px] font-medium text-slate-600 leading-relaxed">
+                                Aquí no empiezas como “novato”. <strong class="text-slate-800">Empiezas como alguien que
+                                    decide aprender bien desde la base.</strong>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-slate-100 relative z-10">
+                        <p class="text-[15.5px] md:text-[16.5px] font-medium text-slate-700 leading-relaxed">
+                            El único requisito real no es saber más, sino estar dispuesto a seguir un proceso y
+                            aplicarlo con constancia.<br><br>
+                            <strong class="text-blue-600 font-extrabold tracking-wide">No llegas tarde. Llegas justo en
+                                el momento correcto.</strong>
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- Perfil 2: Otras Formaciones (Dark) -->
+                <div
+                    class="glass-card bg-slate-900 rounded-[2.5rem] p-8 md:p-10 border border-slate-800 shadow-[0_20px_40px_rgba(0,0,0,0.2)] hover:shadow-[0_25px_50px_rgba(168,85,247,0.15)] hover:border-purple-500/30 transition-all duration-300 flex flex-col h-full relative overflow-hidden group">
+                    <div
+                        class="absolute bottom-0 right-0 w-64 h-64 bg-purple-600/10 rounded-full blur-[80px] pointer-events-none group-hover:bg-purple-600/20 transition-colors duration-700">
+                    </div>
+
+                    <div class="flex items-center gap-4 mb-8 relative z-10">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-white/5 text-purple-400 flex items-center justify-center shrink-0 border border-white/10 shadow-[0_0_15px_rgba(168,85,247,0.2)] relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent"></div>
+                            <svg class="w-7 h-7 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl md:text-[28px] font-black text-white leading-[1.15]">
+                            Si ya has hecho otras<br><span class="text-purple-400">formaciones digitales</span>
+                        </h3>
+                    </div>
+
+                    <div class="space-y-6 flex-1 relative z-10">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="mt-2 w-2 h-2 rounded-full bg-purple-500 shrink-0 shadow-[0_0_8px_rgba(168,85,247,0.6)]">
+                            </div>
+                            <p class="text-[15.5px] md:text-[16.5px] font-medium text-slate-300 leading-relaxed">
+                                El problema no suele ser la falta de esfuerzo, sino <strong class="text-white">la falta
+                                    de estructura.</strong> Aquí el crecimiento viene de entender qué hacer, cuándo
+                                hacerlo y con qué prioridad.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="mt-2 w-2 h-2 rounded-full bg-purple-500 shrink-0 shadow-[0_0_8px_rgba(168,85,247,0.6)]">
+                            </div>
+                            <p class="text-[15.5px] md:text-[16.5px] font-medium text-slate-300 leading-relaxed">
+                                El Método Yinius no te promete empezar de cero. <strong class="text-white">Te permite
+                                    ordenar lo que ya sabes</strong>, eliminar ruido y convertir acción dispersa en
+                                resultados consistentes.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="mt-2 w-2 h-2 rounded-full bg-purple-500 shrink-0 shadow-[0_0_8px_rgba(168,85,247,0.6)]">
+                            </div>
+                            <p class="text-[15.5px] md:text-[16.5px] font-medium text-slate-300 leading-relaxed">
+                                No se trata de trabajar más ni de probar “otra técnica”. <strong class="text-white">Se
+                                    trata de profesionalizar tu forma de generar oportunidades.</strong>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-white/10 relative z-10">
+                        <p class="text-[15.5px] md:text-[16.5px] font-medium text-slate-200 leading-relaxed">
+                            <strong class="text-purple-400 font-extrabold tracking-wide">El objetivo es el
+                                mismo:</strong> acceder a un puesto estable en una empresa digital con proyección real.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CLASES EN DIRECTO & GUARANTEE SECTION -->
+        <section class="max-w-[1300px] mx-auto px-4 md:px-6 py-4 lg:py-6 w-full relative z-10">
+            <div
+                class="glass-card bg-white/95 rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-8 lg:p-10 border border-slate-100 shadow-[0_20px_60px_rgba(0,0,0,0.06)] relative overflow-hidden group">
+
+                <!-- Soft gradient bloobs -->
+                <div
+                    class="absolute top-[-10%] right-[-10%] w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-[120px] pointer-events-none group-hover:bg-purple-500/20 transition-colors duration-700">
+                </div>
+                <div
+                    class="absolute bottom-[-10%] left-[-10%] w-[300px] h-[300px] bg-red-500/5 rounded-full blur-[100px] pointer-events-none group-hover:bg-red-500/10 transition-colors duration-700">
+                </div>
+
+                <!-- Title Header -->
+                <div class="flex flex-col items-center text-center mb-8 md:mb-10 relative z-10 max-w-4xl mx-auto">
+                    <h2
+                        class="text-3xl md:text-4xl lg:text-[46px] font-black text-slate-800 leading-[1.1] tracking-tight mb-4">
+                        Clases en directo con <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">especialistas</span>
+                    </h2>
+                    <h3
+                        class="text-lg md:text-xl lg:text-[24px] font-extrabold text-slate-700 leading-snug tracking-tight">
+                        La formación no es solo contenido.<br class="hidden md:block">
+                        Es poder resolver dudas cuando lo necesitas
+                    </h3>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch relative z-10 w-full">
+
+                    <!-- Left: Text Stack -->
+                    <div class="flex flex-col space-y-4 md:space-y-6 justify-center">
+                        <p
+                            class="text-[16px] md:text-[18px] font-medium text-slate-600 leading-relaxed text-center md:text-left">
+                            Durante la formación tendrás clases en vivo y soporte <strong
+                                class="text-slate-800 font-extrabold">por escrito</strong> para resolver dudas sobre el
+                            contenido y el proceso.
+                        </p>
+
+                        <div
+                            class="bg-gradient-to-br from-red-50 to-orange-50/40 border border-red-100/60 rounded-2xl md:rounded-[1.5rem] p-5 md:p-6 shadow-sm hover:shadow-[0_15px_35px_rgba(239,68,68,0.12)] transition-all duration-500 relative overflow-hidden group/card transform hover:-translate-y-1">
+                            <div class="flex flex-col relative z-10 text-center md:text-left">
+                                <p class="text-[16px] md:text-[17.5px] font-medium text-slate-700 leading-relaxed mb-3">
+                                    Si completas la certificación, sigues el proceso y no consigues trabajo como SDR en
+                                    una empresa digital dentro del plazo establecido, <strong
+                                        class="text-red-600 font-black">te devolvemos el dinero.</strong>
+                                </p>
+                                <p
+                                    class="text-[13px] md:text-[14px] font-bold text-slate-400 uppercase tracking-widest mt-auto">
+                                    La garantía está recogida por contrato.
+                                </p>
+                            </div>
+                            <div
+                                class="absolute -right-20 -top-20 w-48 h-48 bg-red-400/10 rounded-full blur-[40px] pointer-events-none group-hover/card:bg-red-400/20 transition-colors duration-500">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Platform Screenshot inside a premium wrapper -->
+                    <div
+                        class="relative w-full h-[250px] md:h-[300px] lg:h-full bg-slate-50 rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] group-hover:-translate-y-2 group-hover:shadow-[0_40px_80px_rgba(0,0,0,0.15)] transition-all duration-700 ease-out flex items-center justify-center p-2 lg:p-3 border border-slate-200/50 min-h-[300px]">
+                        <div class="w-full h-full rounded-xl overflow-hidden relative shadow-inner">
+                            <img src="IMAGENES VSL (1)/22.png" alt="Plataforma y Clases en directo" loading="lazy"
+                                class="w-full h-full object-cover transform hover:scale-[1.04] transition-transform duration-[1.5s] ease-[cubic-bezier(0.25,1,0.5,1)]">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- FINAL BOTTOM CTA OUTSIDE CARD TIGHTLY ALIGNED -->
+            <div class="max-w-4xl mx-auto px-4 md:px-6 pt-10 pb-4 w-full text-center">
+                <h2
+                    class="text-[18px] md:text-[20px] font-bold text-slate-700 tracking-wide italic mb-6 opacity-90 leading-snug">
+                    ¿Dónde te ves si todo sigue exactamente igual dentro de un año?
+                </h2>
+
+                <button id="btnOpenModal"
+                    class="relative inline-flex px-8 py-3 md:px-12 md:py-5 bg-gradient-to-r from-red-600 via-purple-600 to-blue-600 text-white rounded-full font-black text-[17px] md:text-[20px] overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_20px_40px_rgba(168,85,247,0.4)] hover:shadow-[0_25px_50px_rgba(168,85,247,0.5)] group outline-none tracking-wide">
+                    <div
+                        class="absolute inset-0 w-full h-full bg-white/20 -translate-x-full group-hover:translate-x-full duration-700 ease-in-out">
+                    </div>
+                    Unirme ahora al Método Yinius.io
                 </button>
             </div>
-            
-            <!-- Progress Bar -->
-            <div class="w-full bg-slate-100 h-1.5">
-                <div id="modalProgress" class="bg-primary-500 h-1.5 transition-all duration-500 w-1/3"></div>
+        </section>
+
+        <!-- ESPECIALISTA SECTION -->
+        <section class="max-w-[1300px] mx-auto px-4 md:px-6 py-12 lg:py-16 w-full relative z-10">
+            <div
+                class="glass-card bg-slate-900 rounded-[3rem] lg:rounded-[4rem] p-4 md:p-8 lg:p-12 border border-slate-800 shadow-2xl relative overflow-hidden group">
+
+                <!-- background glows -->
+                <div
+                    class="absolute -top-32 -left-32 w-[600px] h-[600px] bg-primary-600/10 rounded-full blur-[120px] pointer-events-none">
+                </div>
+                <div
+                    class="absolute -bottom-32 -right-32 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none">
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+
+                    <!-- Left Image (Tall Layout) -->
+                    <div
+                        class="lg:col-span-5 h-[400px] md:h-[500px] lg:h-[650px] w-full relative rounded-3xl overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] border border-slate-700/50 group/img">
+                        <img src="IMAGENES VSL (1)/21.png" alt="Álvaro Castro" loading="lazy"
+                            class="w-full h-full object-cover object-[50%_20%] scale-[1.02] group-hover/img:scale-[1.06] transition-transform duration-[2s] ease-out">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent pointer-events-none">
+                        </div>
+                    </div>
+
+                    <!-- Right Content -->
+                    <div class="lg:col-span-7 flex flex-col justify-center relative z-10 px-4 md:px-0">
+                        <h2
+                            class="text-3xl md:text-4xl lg:text-[40px] xl:text-[44px] font-black text-white leading-tight md:leading-snug mb-8 animate-fade-up">
+                            ¿Quién es <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-300 whitespace-nowrap">Álvaro
+                                Castro?</span>
+                        </h2>
+
+                        <div class="space-y-6 md:space-y-8 animate-fade-up" style="animation-delay: 0.1s;">
+
+                            <div
+                                class="relative pl-6 md:pl-8 border-l-2 border-primary-500/30 hover:border-primary-500 transition-colors duration-500">
+                                <div
+                                    class="absolute left-[-5px] top-2 w-2 h-2 rounded-full bg-primary-500 shadow-[0_0_8px_rgba(239,68,68,0.8)]">
+                                </div>
+                                <p class="text-[15.5px] md:text-[17px] text-slate-300 leading-relaxed font-medium">
+                                    <strong class="text-white">Yinius.io nace de la experiencia directa</strong> de
+                                    Álvaro Castro en ventas, tras empezar como comercial y formarse de manera intensiva
+                                    en técnicas de venta y comportamiento humano. Con el tiempo, pasó de formar
+                                    vendedores de forma individual a escalar un sistema replicable, aplicado a decenas
+                                    de profesionales cada mes. <span class="text-primary-400 font-bold tracking-wide">No
+                                        es inspiración personal: es experiencia convertida en método.</span>
+                                </p>
+                            </div>
+
+                            <div
+                                class="relative pl-6 md:pl-8 border-l-2 border-purple-500/30 hover:border-purple-500 transition-colors duration-500">
+                                <div
+                                    class="absolute left-[-5px] top-2 w-2 h-2 rounded-full bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.8)]">
+                                </div>
+                                <p class="text-[15.5px] md:text-[17px] text-slate-300 leading-relaxed font-medium">
+                                    <strong class="text-white">A partir de esa trayectoria,</strong> Álvaro desarrolla
+                                    un enfoque propio basado en vender con ética y estructura, profesionalizando el rol
+                                    del SDR. Yinius.io surge como un sistema diseñado para trasladar lo que funciona en
+                                    el mercado real a una formación clara, aplicable y orientada a resultados
+                                    sostenibles. <span class="text-purple-400 font-bold tracking-wide">Aquí no se enseña
+                                        teoría: se enseña ejecución probada.</span>
+                                </p>
+                            </div>
+
+                            <div
+                                class="relative pl-6 md:pl-8 border-l-2 border-blue-500/30 hover:border-blue-500 transition-colors duration-500">
+                                <div
+                                    class="absolute left-[-5px] top-2 w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.8)]">
+                                </div>
+                                <p class="text-[15.5px] md:text-[17px] text-slate-300 leading-relaxed font-medium">
+                                    <strong class="text-white">Hoy, Yinius.io es un proyecto</strong> con presencia en
+                                    medios nacionales y reconocimiento externo, aplicado para formar y acompañar a
+                                    profesionales que buscan acceder a empresas digitales con criterio y proyección.
+                                    <span
+                                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300 font-black italic block mt-4 text-[17px] md:text-[20px] leading-snug">A
+                                        este punto, la pregunta ya no es si funciona, sino si quieres ser tú quien lo
+                                        aplique.</span>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section class="max-w-4xl mx-auto px-4 md:px-6 py-12 lg:py-16 w-full relative z-10">
+
+            <!-- Header -->
+            <div class="text-center mb-10 md:mb-14 animate-fade-up">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-slate-800 tracking-tight mb-3">
+                    FAQ — <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Preguntas
+                        frecuentes</span>
+                </h2>
+                <p class="text-[16px] md:text-[18px] font-semibold italic text-slate-500">Sobre la certificación</p>
             </div>
 
-            <div class="p-6 md:p-8">
-                <form id="multiStepForm" novalidate onsubmit="return false;">
-                    
-                    <!-- STEP 1 -->
-                    <div class="step-pane transition-all duration-500" id="step1">
-                        <div class="mb-6 flex justify-between items-end">
-                            <h4 class="text-xl font-bold text-slate-900">Datos Personales</h4>
-                            <span class="text-xs font-semibold text-primary-600 bg-primary-50 px-2 py-1 rounded-md">Paso 1 de 3</span>
-                        </div>
-                        <div class="space-y-4">
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wide mb-1.5">Nombre <span class="text-red-500">*</span></label>
-                                    <input type="text" id="inputNombre" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-50 transition-all" placeholder="Juan">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wide mb-1.5">Apellido <span class="text-red-500">*</span></label>
-                                    <input type="text" id="inputApellido" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-50 transition-all" placeholder="Pérez">
-                                </div>
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wide mb-1.5">Email <span class="text-red-500">*</span></label>
-                                <input type="email" id="inputEmail" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-50 transition-all" placeholder="tucorreo@ejemplo.com">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wide mb-1.5">Teléfono <span class="text-red-500">*</span></label>
-                                <div class="flex">
-                                    <select id="inputPais" class="px-3 py-3 bg-slate-50 border border-slate-200 border-r-0 rounded-l-xl text-sm focus:outline-none focus:bg-white focus:border-primary-500 transition-all font-medium text-slate-700">
-                                        <option value="+34">🇪🇸 +34</option>
-                                        <option value="+52">🇲🇽 +52</option>
-                                        <option value="+57">🇨🇴 +57</option>
-                                        <option value="+54">🇦🇷 +54</option>
-                                        <option value="+56">🇨🇱 +56</option>
-                                        <option value="+1">🇺🇸 +1</option>
-                                    </select>
-                                    <input type="tel" id="inputTelefono" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-r-xl text-sm focus:outline-none focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-50 transition-all" placeholder="600 000 000">
-                                </div>
-                            </div>
-                            <div id="errorStep1" class="text-red-500 text-sm hidden font-medium mt-2">Por favor, rellena todos los campos correctamente.</div>
-                        </div>
-                        <div class="mt-8 flex justify-end">
-                            <button type="button" onclick="nextStep(1)" class="px-6 py-3 bg-primary-600 hover:bg-primary-500 text-white rounded-xl font-semibold shadow-md hover:shadow-lg transition-all active:scale-95 flex items-center gap-2">
-                                Siguiente
-                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                            </button>
-                        </div>
-                    </div>
+            <!-- FAQ Items -->
+            <div class="space-y-3" id="faqAccordion">
 
-                    <!-- STEP 2 -->
-                    <div class="step-pane hidden p-6 md:p-8 transition-all duration-300 translate-x-10 opacity-0 bg-white flex flex-col" id="step2">
-                        <div class="mb-6 flex justify-between items-end">
-                            <h4 class="text-xl font-bold text-slate-900">Experiencia</h4>
-                            <span class="text-xs font-semibold text-primary-600 bg-primary-50 px-2 py-1 rounded-md">Paso 2 de 3</span>
-                        </div>
-                        <div class="space-y-4">
-                            <div>
-                                <label class="block text-sm font-semibold text-slate-700 mb-2">¿Alguna vez has trabajado en ventas o atención al público? <span class="text-red-500">*</span></label>
-                                <select id="inputExperiencia" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-50 transition-all appearance-none cursor-pointer">
-                                    <option value="" disabled selected>Selecciona una opción</option>
-                                    <option value="pasado">Sí, trabajé en ello</option>
-                                    <option value="actual">Sí, actualmente</option>
-                                    <option value="no">No (en ese caso, no agendes por favor)</option>
-                                </select>
-                                <div class="pointer-events-none absolute right-12 top-[138px] flex items-center px-2 text-slate-500">
-                                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                                </div>
-                            </div>
-                            <div id="errorStep2" class="text-red-500 text-sm hidden font-medium mt-2">Selecciona una opción para continuar.</div>
-                        </div>
-                        <div class="mt-auto pt-6 flex justify-between">
-                            <button type="button" onclick="prevStep(2)" class="px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl font-semibold transition-all active:scale-95">
-                                Volver
-                            </button>
-                            <button type="button" onclick="nextStep(2)" class="px-6 py-3 bg-primary-600 hover:bg-primary-500 text-white rounded-xl font-semibold shadow-md hover:shadow-lg transition-all active:scale-95 flex items-center gap-2">
-                                Siguiente
-                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                            </button>
-                        </div>
+                <!-- Item 1 -->
+                <div
+                    class="faq-item bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left group"
+                        aria-expanded="false">
+                        <span class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>
+                            <span
+                                class="font-bold text-[16px] md:text-[17px] text-slate-800 group-hover:text-purple-700 transition-colors duration-200">¿Funciona
+                                aunque empiece desde cero?</span>
+                        </span>
+                        <svg class="faq-icon w-5 h-5 text-purple-500 shrink-0 transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-body hidden px-6 pb-5 pt-0">
+                        <p
+                            class="text-[15px] md:text-[16px] text-slate-600 italic leading-relaxed border-l-2 border-purple-200 pl-4">
+                            Sí. La formación está diseñada para personas sin experiencia previa. No necesitas haber
+                            trabajado en ventas ni tener conocimientos técnicos: aprendes desde la base, paso a paso,
+                            hasta certificarte como SDR.</p>
                     </div>
+                </div>
 
-                    <!-- STEP 3 -->
-                    <div class="step-pane hidden p-6 md:p-8 transition-all duration-300 translate-x-10 opacity-0 bg-white flex flex-col" id="step3">
-                        <div class="mb-6 flex justify-between items-end">
-                            <h4 class="text-xl font-bold text-slate-900">Validación</h4>
-                            <span class="text-xs font-semibold text-primary-600 bg-primary-50 px-2 py-1 rounded-md">Paso 3 de 3</span>
-                        </div>
-                        <div class="space-y-4">
-                            <div>
-                                <label class="block text-sm font-semibold text-slate-700 mb-2">¿Tienes permiso para trabajar en España? <span class="text-red-500">*</span></label>
-                                <select id="inputPermiso" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-50 transition-all appearance-none cursor-pointer">
-                                    <option value="" disabled selected>Selecciona una opción</option>
-                                    <option value="si">Sí, tengo</option>
-                                    <option value="no">No (en ese caso, agenda cuando la tengas)</option>
-                                </select>
-                                <div class="pointer-events-none absolute right-12 top-[138px] flex items-center px-2 text-slate-500">
-                                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                                </div>
-                            </div>
-                            <div id="errorStep3" class="text-red-500 text-sm hidden font-medium mt-2">Selecciona una opción para finalizar.</div>
-                        </div>
-                        <div class="mt-auto pt-6 flex justify-between">
-                            <button type="button" onclick="prevStep(3)" class="px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl font-semibold transition-all active:scale-95">
-                                Volver
-                            </button>
-                            <button type="button" onclick="submitForm()" class="px-6 py-3 bg-secondary-600 hover:bg-secondary-500 text-white rounded-xl font-semibold shadow-lg hover:shadow-secondary-500/50 transition-all active:scale-95 flex items-center gap-2">
-                                Enviar
-                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            </button>
-                        </div>
+                <!-- Item 2 -->
+                <div
+                    class="faq-item bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left group"
+                        aria-expanded="false">
+                        <span class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>
+                            <span
+                                class="font-bold text-[16px] md:text-[17px] text-slate-800 group-hover:text-purple-700 transition-colors duration-200">Tengo
+                                experiencia en atención al cliente o trato con personas, ¿esto es para mí?</span>
+                        </span>
+                        <svg class="faq-icon w-5 h-5 text-purple-500 shrink-0 transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-body hidden px-6 pb-5 pt-0">
+                        <p
+                            class="text-[15px] md:text-[16px] text-slate-600 italic leading-relaxed border-l-2 border-purple-200 pl-4">
+                            Sí. Muchos alumnos vienen de atención al público, hostelería o retail. Esa experiencia es
+                            útil, pero aquí aprenderás ventas digitales, prospección y cualificación de leads, que es un
+                            rol distinto y muy demandado.</p>
                     </div>
+                </div>
 
-                    <!-- SUCCESS STATE -->
-                    <div class="step-pane hidden p-6 md:p-8 transition-all duration-300 translate-x-10 opacity-0 bg-white flex flex-col items-center justify-center text-center" id="stepSuccess">
-                        <div class="w-16 h-16 rounded-full bg-green-100 text-green-600 flex items-center justify-center mx-auto mb-4 ring-8 ring-green-50 animate-[fadeUp_0.5s_ease-out]">
-                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                        </div>
-                        <h4 class="text-2xl font-bold text-slate-900 mb-2 animate-fade-up">¡Enviado con éxito!</h4>
-                        <p class="text-slate-500 mb-8 animate-fade-up" style="animation-delay: 0.1s;">Te estaremos contactando pronto.</p>
-                        <button type="button" onclick="closeModal()" class="px-6 py-3 bg-slate-900 text-white rounded-xl font-semibold transition-all hover:bg-slate-800 active:scale-95 animate-fade-up" style="animation-delay: 0.2s;">
-                            Cerrar
-                        </button>
+                <!-- Item 3 -->
+                <div
+                    class="faq-item bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left group"
+                        aria-expanded="false">
+                        <span class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>
+                            <span
+                                class="font-bold text-[16px] md:text-[17px] text-slate-800 group-hover:text-purple-700 transition-colors duration-200">No
+                                tengo un perfil "brillante" ni estudios universitarios, ¿puedo hacerlo?</span>
+                        </span>
+                        <svg class="faq-icon w-5 h-5 text-purple-500 shrink-0 transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-body hidden px-6 pb-5 pt-0">
+                        <p
+                            class="text-[15px] md:text-[16px] text-slate-600 italic leading-relaxed border-l-2 border-purple-200 pl-4">
+                            Sí. No necesitas carrera universitaria ni un perfil previo concreto. Lo que se evalúa es tu
+                            implicación, constancia y cumplimiento del proceso de certificación.</p>
                     </div>
+                </div>
 
-                </form>
+                <!-- Item 4 -->
+                <div
+                    class="faq-item bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left group"
+                        aria-expanded="false">
+                        <span class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>
+                            <span
+                                class="font-bold text-[16px] md:text-[17px] text-slate-800 group-hover:text-purple-700 transition-colors duration-200">¿Hay
+                                que pagar algo?</span>
+                        </span>
+                        <svg class="faq-icon w-5 h-5 text-purple-500 shrink-0 transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-body hidden px-6 pb-5 pt-0">
+                        <p
+                            class="text-[15px] md:text-[16px] text-slate-600 italic leading-relaxed border-l-2 border-purple-200 pl-4">
+                            Sí. La formación tiene un coste que se abona antes de empezar, ya sea al contado o en
+                            cuotas. En algunos casos, puedes financiarla a través de un partner de Yinius. Todo queda
+                            detallado por contrato antes de empezar.</p>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div
+                    class="faq-item bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left group"
+                        aria-expanded="false">
+                        <span class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>
+                            <span
+                                class="font-bold text-[16px] md:text-[17px] text-slate-800 group-hover:text-purple-700 transition-colors duration-200">¿Tengo
+                                que dejar mi trabajo para formarme?</span>
+                        </span>
+                        <svg class="faq-icon w-5 h-5 text-purple-500 shrink-0 transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-body hidden px-6 pb-5 pt-0">
+                        <p
+                            class="text-[15px] md:text-[16px] text-slate-600 italic leading-relaxed border-l-2 border-purple-200 pl-4">
+                            No. Puedes realizar la formación en paralelo a tu empleo actual, organizando tu tiempo entre
+                            sesiones en directo, prácticas y entregas. Eso sí, necesitarás dedicar varias horas a la
+                            semana para poder certificarte.</p>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div
+                    class="faq-item bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left group"
+                        aria-expanded="false">
+                        <span class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>
+                            <span
+                                class="font-bold text-[16px] md:text-[17px] text-slate-800 group-hover:text-purple-700 transition-colors duration-200">No
+                                soy técnico ni sé usar herramientas complejas, ¿es un problema?</span>
+                        </span>
+                        <svg class="faq-icon w-5 h-5 text-purple-500 shrink-0 transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-body hidden px-6 pb-5 pt-0">
+                        <p
+                            class="text-[15px] md:text-[16px] text-slate-600 italic leading-relaxed border-l-2 border-purple-200 pl-4">
+                            No. Aprenderás a usar herramientas como LinkedIn, email o CRM desde cero, enfocadas a la
+                            práctica real del rol de SDR.</p>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div
+                    class="faq-item bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left group"
+                        aria-expanded="false">
+                        <span class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>
+                            <span
+                                class="font-bold text-[16px] md:text-[17px] text-slate-800 group-hover:text-purple-700 transition-colors duration-200">No
+                                tengo producto propio ni idea de qué vender, ¿cómo voy a trabajar de esto?</span>
+                        </span>
+                        <svg class="faq-icon w-5 h-5 text-purple-500 shrink-0 transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-body hidden px-6 pb-5 pt-0">
+                        <p
+                            class="text-[15px] md:text-[16px] text-slate-600 italic leading-relaxed border-l-2 border-purple-200 pl-4">
+                            No necesitas producto propio. Como SDR trabajarás para empresas digitales que ya tienen
+                            producto y equipo comercial. Tu función es abrir oportunidades, no crear ni cerrar ventas.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div
+                    class="faq-item bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left group"
+                        aria-expanded="false">
+                        <span class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>
+                            <span
+                                class="font-bold text-[16px] md:text-[17px] text-slate-800 group-hover:text-purple-700 transition-colors duration-200">Yo
+                                no me considero "vendedor", ¿esto es para ventas agresivas?</span>
+                        </span>
+                        <svg class="faq-icon w-5 h-5 text-purple-500 shrink-0 transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-body hidden px-6 pb-5 pt-0">
+                        <p
+                            class="text-[15px] md:text-[16px] text-slate-600 italic leading-relaxed border-l-2 border-purple-200 pl-4">
+                            No. Es un puesto de ventas digitales, centrado en prospección, identificación de
+                            oportunidades y cualificación de leads. En la mayoría de casos no se cierran ventas, se
+                            generan oportunidades.</p>
+                    </div>
+                </div>
+
+                <!-- Item 9 -->
+                <div
+                    class="faq-item bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left group"
+                        aria-expanded="false">
+                        <span class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>
+                            <span
+                                class="font-bold text-[16px] md:text-[17px] text-slate-800 group-hover:text-purple-700 transition-colors duration-200">No
+                                soy experto en nada, ¿realmente puedo aportar valor?</span>
+                        </span>
+                        <svg class="faq-icon w-5 h-5 text-purple-500 shrink-0 transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-body hidden px-6 pb-5 pt-0">
+                        <p
+                            class="text-[15px] md:text-[16px] text-slate-600 italic leading-relaxed border-l-2 border-purple-200 pl-4">
+                            Sí. El valor del SDR no está en ser experto, sino en aplicar un método claro y replicable.
+                            Por eso la formación se centra en ejecución real, no en teoría.</p>
+                    </div>
+                </div>
+
+                <!-- Item 10 -->
+                <div
+                    class="faq-item bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left group"
+                        aria-expanded="false">
+                        <span class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>
+                            <span
+                                class="font-bold text-[16px] md:text-[17px] text-slate-800 group-hover:text-purple-700 transition-colors duration-200">¿Es
+                                una formación o un empleo?</span>
+                        </span>
+                        <svg class="faq-icon w-5 h-5 text-purple-500 shrink-0 transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-body hidden px-6 pb-5 pt-0">
+                        <p
+                            class="text-[15px] md:text-[16px] text-slate-600 italic leading-relaxed border-l-2 border-purple-200 pl-4">
+                            Es una formación especializada, no un máster universitario. Yinius no te contrata
+                            directamente: te forma y te conecta con empresas digitales que buscan SDRs. Si cumples los
+                            requisitos, accedes a oportunidades laborales reales.</p>
+                    </div>
+                </div>
+
+                <!-- Item 11 -->
+                <div
+                    class="faq-item bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left group"
+                        aria-expanded="false">
+                        <span class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>
+                            <span
+                                class="font-bold text-[16px] md:text-[17px] text-slate-800 group-hover:text-purple-700 transition-colors duration-200">¿Cuánto
+                                tiempo dura la formación?</span>
+                        </span>
+                        <svg class="faq-icon w-5 h-5 text-purple-500 shrink-0 transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-body hidden px-6 pb-5 pt-0">
+                        <p
+                            class="text-[15px] md:text-[16px] text-slate-600 italic leading-relaxed border-l-2 border-purple-200 pl-4">
+                            La duración media es de 6 meses. El plazo máximo para certificarte es de 1 año.</p>
+                    </div>
+                </div>
+
+                <!-- Item 12 -->
+                <div
+                    class="faq-item bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left group"
+                        aria-expanded="false">
+                        <span class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>
+                            <span
+                                class="font-bold text-[16px] md:text-[17px] text-slate-800 group-hover:text-purple-700 transition-colors duration-200">¿Se
+                                garantiza la inserción laboral?</span>
+                        </span>
+                        <svg class="faq-icon w-5 h-5 text-purple-500 shrink-0 transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-body hidden px-6 pb-5 pt-0">
+                        <p
+                            class="text-[15px] md:text-[16px] text-slate-600 italic leading-relaxed border-l-2 border-purple-200 pl-4">
+                            Yinius ofrece una Garantía de Empleabilidad: si cumples con los requisitos de certificación,
+                            prospección y participación definidos en contrato y no consigues empleo en 6 meses, se
+                            devuelve la inversión.<br><br>No es un empleo directo, sino una garantía real de inserción
+                            laboral, condicionada al cumplimiento del proceso.</p>
+                    </div>
+                </div>
+
+                <!-- Item 13 -->
+                <div
+                    class="faq-item bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left group"
+                        aria-expanded="false">
+                        <span class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>
+                            <span
+                                class="font-bold text-[16px] md:text-[17px] text-slate-800 group-hover:text-purple-700 transition-colors duration-200">¿Cuál
+                                es el salario bruto?</span>
+                        </span>
+                        <svg class="faq-icon w-5 h-5 text-purple-500 shrink-0 transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-body hidden px-6 pb-5 pt-0">
+                        <p
+                            class="text-[15px] md:text-[16px] text-slate-600 italic leading-relaxed border-l-2 border-purple-200 pl-4">
+                            Los empleos conseguidos a través de la garantía ofrecen un salario bruto anual a partir de
+                            18.000 € fijos, sin contar comisiones, que dependen de cada empresa.</p>
+                    </div>
+                </div>
+
+                <!-- Item 14 -->
+                <div
+                    class="faq-item bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left group"
+                        aria-expanded="false">
+                        <span class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>
+                            <span
+                                class="font-bold text-[16px] md:text-[17px] text-slate-800 group-hover:text-purple-700 transition-colors duration-200">¿Puedo
+                                trabajar de SDR y seguir con mi empleo actual?</span>
+                        </span>
+                        <svg class="faq-icon w-5 h-5 text-purple-500 shrink-0 transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-body hidden px-6 pb-5 pt-0">
+                        <p
+                            class="text-[15px] md:text-[16px] text-slate-600 italic leading-relaxed border-l-2 border-purple-200 pl-4">
+                            Puedes formarte mientras trabajas. Sin embargo, cuando accedas a un empleo como SDR,
+                            necesitarás disponibilidad de jornada parcial o completa, ya que es un trabajo real con
+                            objetivos semanales.</p>
+                    </div>
+                </div>
+
+                <!-- Item 15 -->
+                <div
+                    class="faq-item bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left group"
+                        aria-expanded="false">
+                        <span class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>
+                            <span
+                                class="font-bold text-[16px] md:text-[17px] text-slate-800 group-hover:text-purple-700 transition-colors duration-200">¿Por
+                                qué se pregunta lo del ASNEF?</span>
+                        </span>
+                        <svg class="faq-icon w-5 h-5 text-purple-500 shrink-0 transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-body hidden px-6 pb-5 pt-0">
+                        <p
+                            class="text-[15px] md:text-[16px] text-slate-600 italic leading-relaxed border-l-2 border-purple-200 pl-4">
+                            Porque algunos planes de financiación requieren verificar solvencia antes de autorizar el
+                            pago en cuotas. Estar en ASNEF no te impide formarte, pero puede influir en el plan de pago
+                            disponible.</p>
+                    </div>
+                </div>
+
+                <!-- Item 16 -->
+                <div
+                    class="faq-item bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left group"
+                        aria-expanded="false">
+                        <span class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>
+                            <span
+                                class="font-bold text-[16px] md:text-[17px] text-slate-800 group-hover:text-purple-700 transition-colors duration-200">¿Esto
+                                sirve para afiliados o perfiles alternativos?</span>
+                        </span>
+                        <svg class="faq-icon w-5 h-5 text-purple-500 shrink-0 transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-body hidden px-6 pb-5 pt-0">
+                        <p
+                            class="text-[15px] md:text-[16px] text-slate-600 italic leading-relaxed border-l-2 border-purple-200 pl-4">
+                            Sí. La formación es útil para perfiles que quieran trabajar en ventas digitales, prospección
+                            o generación de oportunidades, incluso si vienen de otros modelos online.</p>
+                    </div>
+                </div>
+
+                <!-- Item 17 -->
+                <div
+                    class="faq-item bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                    <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left group"
+                        aria-expanded="false">
+                        <span class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>
+                            <span
+                                class="font-bold text-[16px] md:text-[17px] text-slate-800 group-hover:text-purple-700 transition-colors duration-200">¿Se
+                                enseñan habilidades prácticas reales?</span>
+                        </span>
+                        <svg class="faq-icon w-5 h-5 text-purple-500 shrink-0 transition-transform duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-body hidden px-6 pb-5 pt-0">
+                        <p
+                            class="text-[15px] md:text-[16px] text-slate-600 italic leading-relaxed border-l-2 border-purple-200 pl-4">
+                            Sí. La formación es 100% práctica, orientada a lo que las empresas demandan hoy: prospección
+                            digital, cualificación, uso de herramientas y trabajo con objetivos reales.</p>
+                    </div>
+                </div>
+
             </div>
+        </section>
+
+        <script>
+            // FAQ Accordion Logic
+            document.querySelectorAll('.faq-trigger').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    const item = this.closest('.faq-item');
+                    const body = item.querySelector('.faq-body');
+                    const icon = item.querySelector('.faq-icon');
+                    const isOpen = !body.classList.contains('hidden');
+
+                    // Close all
+                    document.querySelectorAll('.faq-item').forEach(function (el) {
+                        el.querySelector('.faq-body').classList.add('hidden');
+                        el.querySelector('.faq-icon').classList.remove('rotate-180');
+                        el.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+                        el.classList.remove('border-purple-200', 'shadow-md');
+                        el.classList.add('border-slate-100');
+                    });
+
+                    // Open clicked if it was closed
+                    if (!isOpen) {
+                        body.classList.remove('hidden');
+                        icon.classList.add('rotate-180');
+                        this.setAttribute('aria-expanded', 'true');
+                        item.classList.add('border-purple-200', 'shadow-md');
+                        item.classList.remove('border-slate-100');
+                    }
+                });
+            });
+        </script>
+
+    </main>
+    <!-- END MAIN CONTENT -->
+
+    <!-- FINAL CTA BAND -->
+    <div style="width:100%;background:#fff;border-top:1px solid #e2e8f0;">
+        <div style="max-width:1280px;margin:0 auto;padding:2rem 2.5rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem;">
+            <div style="display:flex;align-items:center;gap:1.25rem;">
+                <img src="IMAGENES VSL (1)/2.png" alt="Alumnos formados" style="height:3.5rem;width:auto;object-fit:contain;flex-shrink:0;">
+                <div>
+                    <p style="font-weight:900;color:#1e293b;font-size:1.125rem;line-height:1.3;">+ de 796 alumnos formados</p>
+                    <p style="font-size:0.8125rem;font-weight:600;color:#7c3aed;">¡Únete a la comunidad de Yinius.io!</p>
+                </div>
+            </div>
+            <button class="open-modal-btn" style="display:inline-flex;align-items:center;padding:1rem 2.5rem;background:linear-gradient(90deg,#dc2626,#7c3aed,#2563eb);color:#fff;border-radius:9999px;font-weight:900;font-size:1.125rem;border:none;cursor:pointer;white-space:nowrap;box-shadow:0 15px 35px rgba(168,85,247,0.45);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.05)';this.style.boxShadow='0 20px 45px rgba(168,85,247,0.55)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 15px 35px rgba(168,85,247,0.45)'">Únirme ahora al Método Yinius.io</button>
         </div>
     </div>
 
-    <script>
-        // Modal Logic
-        const modal = document.getElementById('applicationModal');
-        const modalContent = document.getElementById('modalContent');
-        const btnOpen = document.getElementById('btnOpenModal');
-        const btnClose = document.getElementById('btnCloseModal');
-        const backdrop = document.getElementById('modalBackdrop');
-        const progressBar = document.getElementById('modalProgress');
+    <!-- FOOTER FULL BLEED -->
+    <footer style="width:100%;margin:0;padding:0;background:linear-gradient(135deg,#1d4ed8 0%,#7c3aed 50%,#4338ca 100%);display:block;">
+        <div style="max-width:900px;margin:0 auto;padding:2rem 1.5rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:1rem;">
+            <img src="IMAGENES VSL (1)/1.png" alt="Yinius.io" style="height:2.5rem;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.95;">
+            <nav style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0.5rem 1.25rem;">
+                <a href="https://yinius.io/politica-de-privacidad/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;font-weight:600;text-decoration:none;">Política de privacidad</a>
+                <span style="color:rgba(255,255,255,0.3);">|</span>
+                <a href="https://yinius.io/aviso-legal/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;font-weight:600;text-decoration:none;">Aviso legal</a>
+                <span style="color:rgba(255,255,255,0.3);">|</span>
+                <a href="https://yinius.io/politica-de-cookies/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.7);font-size:0.8125rem;font-weight:600;text-decoration:none;">Cookies</a>
+            </nav>
+            <p style="color:rgba(255,255,255,0.45);font-size:0.75rem;font-weight:500;margin:0;">Copyright ® 2026 Todos los derechos reservados | Yinius.io | Desde Valencia con ♥</p>
+        </div>
+    </footer>
 
-        function openModal() {
-            modal.classList.remove('opacity-0', 'pointer-events-none');
-            setTimeout(() => {
-                modalContent.classList.remove('scale-95', 'opacity-0');
-            }, 50);
-        }
+                <!-- Multi-Step Modal Overlay -->
+        <div id="applicationModal"
+            class="fixed inset-0 z-50 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+            <!-- Backdrop -->
+            <div id="modalBackdrop" class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm cursor-pointer"></div>
 
-        function closeModal() {
-            modalContent.classList.add('scale-95', 'opacity-0');
-            setTimeout(() => {
-                modal.classList.add('opacity-0', 'pointer-events-none');
-                // Optional: reset form after closing
-                // resetForm(); 
-            }, 300);
-        }
+            <!-- Modal Container -->
+            <div class="relative bg-white rounded-3xl shadow-2xl w-full max-w-lg mx-4 transform scale-95 opacity-0 transition-all duration-300 overflow-hidden"
+                id="modalContent">
 
-        btnOpen.addEventListener('click', openModal);
-        btnClose.addEventListener('click', closeModal);
-        backdrop.addEventListener('click', closeModal);
+                <!-- Header with Close & Progress -->
+                <div class="px-6 py-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+                    <h3 class="text-lg font-bold text-slate-800">Candidatura</h3>
+                    <button id="btnCloseModal"
+                        class="text-slate-400 hover:text-red-500 transition-colors bg-white rounded-full p-1 shadow-sm border border-slate-200 hover:rotate-90">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
 
-        // Multi-step Wizard Logic
-        function validateStep1() {
-            const nom = document.getElementById('inputNombre').value.trim();
-            const ape = document.getElementById('inputApellido').value.trim();
-            const elm = document.getElementById('inputEmail').value.trim();
-            const tel = document.getElementById('inputTelefono').value.trim();
-            const err = document.getElementById('errorStep1');
-            
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            
-            if (!nom || !ape || !elm || !tel || !emailRegex.test(elm)) {
-                err.classList.remove('hidden');
-                return false;
-            }
-            err.classList.add('hidden');
-            return true;
-        }
+                <!-- Progress Bar -->
+                <div class="w-full bg-slate-100 h-1.5">
+                    <div id="modalProgress" class="bg-primary-500 h-1.5 transition-all duration-500 w-1/3"></div>
+                </div>
 
-        function validateStep2() {
-            const exp = document.getElementById('inputExperiencia').value;
-            const err = document.getElementById('errorStep2');
-            if (!exp) {
-                err.classList.remove('hidden');
-                return false;
-            }
-            err.classList.add('hidden');
-            return true;
-        }
+                <div class="p-6 md:p-8">
+                    <form id="multiStepForm" novalidate onsubmit="return false;">
 
-        function validateStep3() {
-            const perm = document.getElementById('inputPermiso').value;
-            const err = document.getElementById('errorStep3');
-            if (!perm) {
-                err.classList.remove('hidden');
-                return false;
-            }
-            err.classList.add('hidden');
-            return true;
-        }
+                        <!-- STEP 1 -->
+                        <div class="step-pane transition-all duration-500" id="step1">
+                            <div class="mb-6 flex justify-between items-end">
+                                <h4 class="text-xl font-bold text-slate-900">Datos Personales</h4>
+                                <span
+                                    class="text-xs font-semibold text-primary-600 bg-primary-50 px-2 py-1 rounded-md">Paso
+                                    1 de 3</span>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label
+                                            class="block text-xs font-semibold text-slate-600 uppercase tracking-wide mb-1.5">Nombre
+                                            <span class="text-red-500">*</span></label>
+                                        <input type="text" id="inputNombre" required
+                                            class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-50 transition-all"
+                                            placeholder="Juan">
+                                    </div>
+                                    <div>
+                                        <label
+                                            class="block text-xs font-semibold text-slate-600 uppercase tracking-wide mb-1.5">Apellido
+                                            <span class="text-red-500">*</span></label>
+                                        <input type="text" id="inputApellido" required
+                                            class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-50 transition-all"
+                                            placeholder="Pérez">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-xs font-semibold text-slate-600 uppercase tracking-wide mb-1.5">Email
+                                        <span class="text-red-500">*</span></label>
+                                    <input type="email" id="inputEmail" required
+                                        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-50 transition-all"
+                                        placeholder="tucorreo@ejemplo.com">
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-xs font-semibold text-slate-600 uppercase tracking-wide mb-1.5">Teléfono
+                                        <span class="text-red-500">*</span></label>
+                                    <div class="flex">
+                                        <select id="inputPais"
+                                            class="px-3 py-3 bg-slate-50 border border-slate-200 border-r-0 rounded-l-xl text-sm focus:outline-none focus:bg-white focus:border-primary-500 transition-all font-medium text-slate-700">
+                                            <option value="+34">🇪🇸 +34</option>
+                                            <option value="+52">🇲🇽 +52</option>
+                                            <option value="+57">🇨🇴 +57</option>
+                                            <option value="+54">🇦🇷 +54</option>
+                                            <option value="+56">🇨🇱 +56</option>
+                                            <option value="+1">🇺🇸 +1</option>
+                                        </select>
+                                        <input type="tel" id="inputTelefono" required
+                                            class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-r-xl text-sm focus:outline-none focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-50 transition-all"
+                                            placeholder="600 000 000">
+                                    </div>
+                                </div>
+                                <div id="errorStep1" class="text-red-500 text-sm hidden font-medium mt-2">Por favor,
+                                    rellena todos los campos correctamente.</div>
+                            </div>
+                            <div class="mt-8 flex justify-end">
+                                <button type="button" onclick="nextStep(1)"
+                                    class="px-6 py-3 bg-primary-600 hover:bg-primary-500 text-white rounded-xl font-semibold shadow-md hover:shadow-lg transition-all active:scale-95 flex items-center gap-2">
+                                    Siguiente
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
 
-        function switchPane(fromStepId, toStepId, progressWidth) {
-            const fromPane = document.getElementById(fromStepId);
-            const toPane = document.getElementById(toStepId);
-            
-            // Fade out current
-            fromPane.classList.add('opacity-0');
-            
-            setTimeout(() => {
-                fromPane.classList.add('hidden');
-                
-                // Prepare new
-                toPane.classList.remove('hidden');
+                        <!-- STEP 2 -->
+                        <div class="step-pane hidden p-6 md:p-8 transition-all duration-300 translate-x-10 opacity-0 bg-white flex flex-col"
+                            id="step2">
+                            <div class="mb-6 flex justify-between items-end">
+                                <h4 class="text-xl font-bold text-slate-900">Experiencia</h4>
+                                <span
+                                    class="text-xs font-semibold text-primary-600 bg-primary-50 px-2 py-1 rounded-md">Paso
+                                    2 de 3</span>
+                            </div>
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-sm font-semibold text-slate-700 mb-2">¿Alguna vez has
+                                        trabajado en ventas o atención al público? <span
+                                            class="text-red-500">*</span></label>
+                                    <select id="inputExperiencia" required
+                                        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-50 transition-all appearance-none cursor-pointer">
+                                        <option value="" disabled selected>Selecciona una opción</option>
+                                        <option value="pasado">Sí, trabajé en ello</option>
+                                        <option value="actual">Sí, actualmente</option>
+                                        <option value="no">No (en ese caso, no agendes por favor)</option>
+                                    </select>
+                                    <div
+                                        class="pointer-events-none absolute right-12 top-[138px] flex items-center px-2 text-slate-500">
+                                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div id="errorStep2" class="text-red-500 text-sm hidden font-medium mt-2">Selecciona una
+                                    opción para continuar.</div>
+                            </div>
+                            <div class="mt-auto pt-6 flex justify-between">
+                                <button type="button" onclick="prevStep(2)"
+                                    class="px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl font-semibold transition-all active:scale-95">
+                                    Volver
+                                </button>
+                                <button type="button" onclick="nextStep(2)"
+                                    class="px-6 py-3 bg-primary-600 hover:bg-primary-500 text-white rounded-xl font-semibold shadow-md hover:shadow-lg transition-all active:scale-95 flex items-center gap-2">
+                                    Siguiente
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- STEP 3 -->
+                        <div class="step-pane hidden p-6 md:p-8 transition-all duration-300 translate-x-10 opacity-0 bg-white flex flex-col"
+                            id="step3">
+                            <div class="mb-6 flex justify-between items-end">
+                                <h4 class="text-xl font-bold text-slate-900">Validación</h4>
+                                <span
+                                    class="text-xs font-semibold text-primary-600 bg-primary-50 px-2 py-1 rounded-md">Paso
+                                    3 de 3</span>
+                            </div>
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-sm font-semibold text-slate-700 mb-2">¿Tienes permiso para
+                                        trabajar en España? <span class="text-red-500">*</span></label>
+                                    <select id="inputPermiso" required
+                                        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-50 transition-all appearance-none cursor-pointer">
+                                        <option value="" disabled selected>Selecciona una opción</option>
+                                        <option value="si">Sí, tengo</option>
+                                        <option value="no">No (en ese caso, agenda cuando la tengas)</option>
+                                    </select>
+                                    <div
+                                        class="pointer-events-none absolute right-12 top-[138px] flex items-center px-2 text-slate-500">
+                                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div id="errorStep3" class="text-red-500 text-sm hidden font-medium mt-2">Selecciona una
+                                    opción para finalizar.</div>
+                            </div>
+                            <div class="mt-auto pt-6 flex justify-between">
+                                <button type="button" onclick="prevStep(3)"
+                                    class="px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl font-semibold transition-all active:scale-95">
+                                    Volver
+                                </button>
+                                <button type="button" onclick="submitForm()"
+                                    class="px-6 py-3 bg-secondary-600 hover:bg-secondary-500 text-white rounded-xl font-semibold shadow-lg hover:shadow-secondary-500/50 transition-all active:scale-95 flex items-center gap-2">
+                                    Enviar
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- SUCCESS STATE -->
+                        <div class="step-pane hidden p-6 md:p-8 transition-all duration-300 translate-x-10 opacity-0 bg-white flex flex-col items-center justify-center text-center"
+                            id="stepSuccess">
+                            <div
+                                class="w-16 h-16 rounded-full bg-green-100 text-green-600 flex items-center justify-center mx-auto mb-4 ring-8 ring-green-50 animate-[fadeUp_0.5s_ease-out]">
+                                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <h4 class="text-2xl font-bold text-slate-900 mb-2 animate-fade-up">¡Enviado con éxito!</h4>
+                            <p class="text-slate-500 mb-8 animate-fade-up" style="animation-delay: 0.1s;">Te estaremos
+                                contactando pronto.</p>
+                            <button type="button" onclick="closeModal()"
+                                class="px-6 py-3 bg-slate-900 text-white rounded-xl font-semibold transition-all hover:bg-slate-800 active:scale-95 animate-fade-up"
+                                style="animation-delay: 0.2s;">
+                                Cerrar
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Modal Logic
+            const modal = document.getElementById('applicationModal');
+            const modalContent = document.getElementById('modalContent');
+            const btnOpen = document.getElementById('btnOpenModal');
+            const btnClose = document.getElementById('btnCloseModal');
+            const backdrop = document.getElementById('modalBackdrop');
+            const progressBar = document.getElementById('modalProgress');
+
+            function openModal() {
+                modal.classList.remove('opacity-0', 'pointer-events-none');
                 setTimeout(() => {
-                    toPane.classList.remove('translate-x-10', 'opacity-0');
+                    modalContent.classList.remove('scale-95', 'opacity-0');
                 }, 50);
-            }, 300); // Wait for fade out
-
-            // Update Progress
-            progressBar.className = `bg-primary-500 h-1.5 transition-all duration-500 ${progressWidth}`;
-        }
-
-        function nextStep(currentStep) {
-            if (currentStep === 1) {
-                if (validateStep1()) switchPane('step1', 'step2', 'w-2/3');
-            } else if (currentStep === 2) {
-                if (validateStep2()) switchPane('step2', 'step3', 'w-full');
             }
-        }
 
-        function prevStep(currentStep) {
-            if (currentStep === 2) {
-                switchPane('step2', 'step1', 'w-1/3');
-            } else if (currentStep === 3) {
-                switchPane('step3', 'step2', 'w-2/3');
+            function closeModal() {
+                modalContent.classList.add('scale-95', 'opacity-0');
+                setTimeout(() => {
+                    modal.classList.add('opacity-0', 'pointer-events-none');
+                    // Optional: reset form after closing
+                    // resetForm(); 
+                }, 300);
             }
-        }
 
-        function submitForm() {
-            if (!validateStep3()) return;
-            
-            // Here you would collect data and send to backend
-            const formData = {
-                nombre: document.getElementById('inputNombre').value,
-                apellido: document.getElementById('inputApellido').value,
-                email: document.getElementById('inputEmail').value,
-                pais: document.getElementById('inputPais').value,
-                telefono: document.getElementById('inputTelefono').value,
-                experiencia: document.getElementById('inputExperiencia').value,
-                permiso: document.getElementById('inputPermiso').value,
-            };
+            btnOpen.addEventListener('click', openModal);
+            btnClose.addEventListener('click', closeModal);
+            backdrop.addEventListener('click', closeModal);
 
-            console.log("Form Data Sent: ", formData);
-            
-            // Show Success
-            switchPane('step3', 'stepSuccess', 'w-full bg-green-500');
-        }
+            // Multi-step Wizard Logic
+            function validateStep1() {
+                const nom = document.getElementById('inputNombre').value.trim();
+                const ape = document.getElementById('inputApellido').value.trim();
+                const elm = document.getElementById('inputEmail').value.trim();
+                const tel = document.getElementById('inputTelefono').value.trim();
+                const err = document.getElementById('errorStep1');
 
-        function resetForm() {
-            document.getElementById('multiStepForm').reset();
-            const panes = ['step1', 'step2', 'step3', 'stepSuccess'];
-            panes.forEach(id => {
-                const p = document.getElementById(id);
-                p.classList.add('hidden', 'translate-x-10', 'opacity-0');
-                p.classList.remove('-translate-x-10');
-            });
-            const s1 = document.getElementById('step1');
-            s1.classList.remove('hidden', 'translate-x-10', 'opacity-0');
-            progressBar.className = 'bg-primary-500 h-1.5 transition-all duration-500 w-1/3';
-        }
-    </script>
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (!nom || !ape || !elm || !tel || !emailRegex.test(elm)) {
+                    err.classList.remove('hidden');
+                    return false;
+                }
+                err.classList.add('hidden');
+                return true;
+            }
+
+            function validateStep2() {
+                const exp = document.getElementById('inputExperiencia').value;
+                const err = document.getElementById('errorStep2');
+                if (!exp) {
+                    err.classList.remove('hidden');
+                    return false;
+                }
+                err.classList.add('hidden');
+                return true;
+            }
+
+            function validateStep3() {
+                const perm = document.getElementById('inputPermiso').value;
+                const err = document.getElementById('errorStep3');
+                if (!perm) {
+                    err.classList.remove('hidden');
+                    return false;
+                }
+                err.classList.add('hidden');
+                return true;
+            }
+
+            function switchPane(fromStepId, toStepId, progressWidth) {
+                const fromPane = document.getElementById(fromStepId);
+                const toPane = document.getElementById(toStepId);
+
+                // Fade out current
+                fromPane.classList.add('opacity-0');
+
+                setTimeout(() => {
+                    fromPane.classList.add('hidden');
+
+                    // Prepare new
+                    toPane.classList.remove('hidden');
+                    setTimeout(() => {
+                        toPane.classList.remove('translate-x-10', 'opacity-0');
+                    }, 50);
+                }, 300); // Wait for fade out
+
+                // Update Progress
+                progressBar.className = `bg-primary-500 h-1.5 transition-all duration-500 ${progressWidth}`;
+            }
+
+            function nextStep(currentStep) {
+                if (currentStep === 1) {
+                    if (validateStep1()) switchPane('step1', 'step2', 'w-2/3');
+                } else if (currentStep === 2) {
+                    if (validateStep2()) switchPane('step2', 'step3', 'w-full');
+                }
+            }
+
+            function prevStep(currentStep) {
+                if (currentStep === 2) {
+                    switchPane('step2', 'step1', 'w-1/3');
+                } else if (currentStep === 3) {
+                    switchPane('step3', 'step2', 'w-2/3');
+                }
+            }
+
+            function submitForm() {
+                if (!validateStep3()) return;
+
+                // Here you would collect data and send to backend
+                const formData = {
+                    nombre: document.getElementById('inputNombre').value,
+                    apellido: document.getElementById('inputApellido').value,
+                    email: document.getElementById('inputEmail').value,
+                    pais: document.getElementById('inputPais').value,
+                    telefono: document.getElementById('inputTelefono').value,
+                    experiencia: document.getElementById('inputExperiencia').value,
+                    permiso: document.getElementById('inputPermiso').value,
+                };
+
+                console.log("Form Data Sent: ", formData);
+
+                // Show Success
+                switchPane('step3', 'stepSuccess', 'w-full bg-green-500');
+            }
+
+            function resetForm() {
+                document.getElementById('multiStepForm').reset();
+                const panes = ['step1', 'step2', 'step3', 'stepSuccess'];
+                panes.forEach(id => {
+                    const p = document.getElementById(id);
+                    p.classList.add('hidden', 'translate-x-10', 'opacity-0');
+                    p.classList.remove('-translate-x-10');
+                });
+                const s1 = document.getElementById('step1');
+                s1.classList.remove('hidden', 'translate-x-10', 'opacity-0');
+                progressBar.className = 'bg-primary-500 h-1.5 transition-all duration-500 w-1/3';
+            }
+        </script>
 </body>
+
 </html>
